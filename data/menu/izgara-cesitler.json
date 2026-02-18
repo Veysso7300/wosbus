@@ -3,22 +3,26 @@
     {
       "active": true,
       "title": "IZGARA KÖFTE",
-      "price": 250
+      "price": 250,
+      "image": "/uploads/IZGARAKÖGTE.jpg"
     },
     {
       "active": true,
       "title": "IZGARA BALIK",
-      "price": 299
+      "price": 299,
+      "image": "/uploads/izgara-levrek-balik-tarifi.jpg"
     },
     {
       "active": true,
       "title": "KANAT PORSİYON",
-      "price": 250
+      "price": 250,
+      "image": "/uploads/KANAT.jpg"
     },
     {
       "active": true,
       "title": "TAVUK PİRZOLA",
-      "price": 250
+      "price": 250,
+      "image": "/uploads/tavuk-pirzola-15208c40-e887-4e78-ae56-3ccd88b7f807.avif"
     }
   ]
 }
