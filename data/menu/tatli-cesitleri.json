@@ -1,1 +1,59 @@
-{ "items": [] }
+{
+  "items": [
+    {
+      "active": true,
+      "title": "NAŞKIM",
+      "price": 260
+    },
+    {
+      "active": true,
+      "title": "PROFİTEROLLÜ PASTA",
+      "price": 260
+    },
+    {
+      "active": true,
+      "title": "MONO LATTE",
+      "price": 260
+    },
+    {
+      "active": true,
+      "title": "BELLA PASTA",
+      "price": 260
+    },
+    {
+      "active": true,
+      "title": "ÇİKOLATALI FISTIKLI PASTA",
+      "price": 260
+    },
+    {
+      "active": true,
+      "title": "ÇİKOLATA ŞÖLENİ",
+      "price": 260
+    },
+    {
+      "active": true,
+      "title": "FISTIK ŞÖLENİ",
+      "price": 260
+    },
+    {
+      "active": true,
+      "title": "SUFLE",
+      "price": 260
+    },
+    {
+      "active": true,
+      "title": "ORMAN MEYVELİ PASTA",
+      "price": 260
+    },
+    {
+      "active": true,
+      "title": "MOZAİK PASTA",
+      "price": 260
+    },
+    {
+      "active": true,
+      "title": "RED VELVET",
+      "price": 260
+    }
+  ]
+}
