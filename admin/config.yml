@@ -9,11 +9,12 @@ public_folder: "/uploads"
 
 collections:
   - name: "menu"
-    label: "Menü"
+    label: "🍽️ Menü Yönetimi"
     files:
-      - name: "kahveler"
-        label: "☕ Kahveler"
-        file: "data/menu/kahveler.json"
+
+      - name: "izgara"
+        label: "🔥 Izgara Çeşitleri"
+        file: "data/menu/izgara-cesitler.json"
         format: "json"
         editor: { preview: false }
         fields: &item_fields
@@ -26,27 +27,83 @@ collections:
             fields:
               - { label: "Aktif", name: "active", widget: "boolean", default: true }
               - { label: "Ürün Adı", name: "title", widget: "string" }
-              - { label: "Fiyat (₺)", name: "price", widget: "number", value_type: "float", min: 0, default: 0 }
+              - { label: "Fiyat (₺)", name: "price", widget: "number", value_type: "float", min: 0 }
               - { label: "Fotoğraf", name: "image", widget: "image", required: false }
-              - { label: "Açıklama", name: "desc", widget: "string", required: false, hint: "Kısa tut (5–8 kelime)" }
+              - { label: "Açıklama", name: "desc", widget: "string", required: false }
+
+      - name: "salatalar"
+        label: "🥗 Salatalar"
+        file: "data/menu/salatalar.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields
+
+      - name: "atistirmaliklar"
+        label: "🍟 Atıştırmalıklar"
+        file: "data/menu/atistirmaliklar.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields
+
+      - name: "ekmekarasi"
+        label: "🥪 Ekmek Arası Lezzetler"
+        file: "data/menu/ekmek-arasi-lezzetler.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields
+
+      - name: "hamburgerler"
+        label: "🍔 Hamburgerler"
+        file: "data/menu/hamburgerler.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields
+
+      - name: "tostlar"
+        label: "🥪 Tostlar"
+        file: "data/menu/tostlar.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields
+
+      - name: "kahveler"
+        label: "☕ Kahveler"
+        file: "data/menu/kahveler.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields
+
+      - name: "caylar"
+        label: "🍵 Çaylar"
+        file: "data/menu/caylar.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields
+
+      - name: "kokteyller"
+        label: "🍸 Kokteyller"
+        file: "data/menu/kokteyller.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields
+
+      - name: "mesrubatlar"
+        label: "🥤 Meşrubatlar"
+        file: "data/menu/mesrubatlar.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields
 
       - name: "tatlilar"
-        label: "🍰 Tatlılar"
-        file: "data/menu/tatlilar.json"
+        label: "🍰 Tatlı Çeşitleri"
+        file: "data/menu/tatli-cesitleri.json"
         format: "json"
         editor: { preview: false }
         fields: *item_fields
 
-      - name: "icecekler"
-        label: "🥤 İçecekler"
-        file: "data/menu/icecekler.json"
-        format: "json"
-        editor: { preview: false }
-        fields: *item_fields
-
-      - name: "yiyecekler"
-        label: "🥪 Yiyecekler"
-        file: "data/menu/yiyecekler.json"
+      - name: "nargile"
+        label: "💨 Nargile Çeşitleri"
+        file: "data/menu/nargile-cesitleri.json"
         format: "json"
         editor: { preview: false }
         fields: *item_fields
