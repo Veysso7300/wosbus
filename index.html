@@ -2,140 +2,314 @@
 <html lang="tr">
   <head>
     <meta charset="utf-8" />
-    <title>Wosbus Menü</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wosbus Menü</title>
+
     <style>
-      :root { color-scheme: dark; }
-      body{
-        margin:0;
+      :root {
+        --bg: #0b0b0b;
+        --card: #141414;
+        --muted: #a9a9a9;
+        --text: #ffffff;
+        --accent: #00e5ff;
+        --border: rgba(255,255,255,.08);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
         font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif;
-        background:#0b0b0b;
-        color:#fff;
+        background: radial-gradient(1200px 700px at 20% 0%, rgba(0,229,255,.14), transparent 60%),
+                    radial-gradient(1000px 600px at 90% 10%, rgba(255,0,122,.10), transparent 55%),
+                    var(--bg);
+        color: var(--text);
       }
-      .wrap{ max-width: 900px; margin: 0 auto; padding: 28px 18px 60px; }
-      h1{ margin: 0 0 14px; font-size: 42px; letter-spacing: .2px; }
-      .tabs{ display:flex; gap:10px; margin: 14px 0 22px; flex-wrap: wrap; }
-      .tab{
-        border:1px solid rgba(255,255,255,.14);
+      .wrap { max-width: 1000px; margin: 0 auto; padding: 28px 16px 80px; }
+      header {
+        display: flex; gap: 12px; align-items: center; justify-content: space-between;
+        margin-bottom: 18px;
+      }
+      .brand {
+        display: flex; flex-direction: column; gap: 2px;
+      }
+      h1 { margin: 0; font-size: 34px; letter-spacing: .2px; }
+      .sub { color: var(--muted); font-size: 14px; }
+
+      .actions { display: flex; gap: 10px; align-items: center; }
+      .btn {
+        border: 1px solid var(--border);
         background: rgba(255,255,255,.04);
-        color:#fff;
-        padding: 10px 14px;
+        color: var(--text);
+        padding: 10px 12px;
         border-radius: 12px;
-        cursor:pointer;
-        user-select:none;
+        text-decoration: none;
+        font-size: 14px;
+        display: inline-flex; align-items: center; gap: 8px;
       }
-      .tab.active{ background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.22); }
-      .card{
-        border:1px solid rgba(255,255,255,.10);
+      .btn:hover { border-color: rgba(0,229,255,.35); }
+
+      .panel {
+        border: 1px solid var(--border);
         background: rgba(255,255,255,.03);
-        border-radius: 18px;
+        border-radius: 16px;
         padding: 14px;
+        display: grid;
+        grid-template-columns: 1fr 180px 180px;
+        gap: 10px;
+        margin-bottom: 18px;
       }
-      .row{
-        display:flex;
-        align-items:flex-start;
-        justify-content:space-between;
-        gap: 14px;
-        padding: 14px 12px;
-        border-radius: 14px;
-      }
-      .row + .row{ margin-top: 8px; }
-      .row:hover{ background: rgba(255,255,255,.04); }
-      .title{ font-weight: 650; font-size: 18px; }
-      .desc{ opacity:.75; margin-top: 4px; font-size: 13px; }
-      .price{ font-weight:700; white-space: nowrap; }
-      .note{ opacity:.55; text-align:center; margin-top: 18px; font-size: 12px; }
-      .err{
-        margin-top:18px;
-        border:1px solid rgba(255,80,80,.35);
-        background: rgba(255,80,80,.10);
-        padding: 12px 14px;
+      input, select {
+        width: 100%;
+        padding: 12px 12px;
         border-radius: 12px;
-        color:#ffd0d0;
+        border: 1px solid var(--border);
+        background: rgba(0,0,0,.35);
+        color: var(--text);
+        outline: none;
       }
-      .topbar{ display:flex; justify-content:space-between; align-items:center; gap:10px; }
-      .adminLink{
-        font-size: 13px; opacity:.75; text-decoration:none; color:#fff;
-        border:1px solid rgba(255,255,255,.14);
-        padding: 8px 10px; border-radius: 12px;
-        background: rgba(255,255,255,.04);
+      input::placeholder { color: rgba(255,255,255,.45); }
+      .hint { color: var(--muted); font-size: 12px; margin-top: 6px; }
+
+      .grid { display: grid; gap: 14px; }
+      .cat {
+        border: 1px solid var(--border);
+        background: rgba(255,255,255,.02);
+        border-radius: 18px;
+        overflow: hidden;
       }
-      .adminLink:hover{ opacity: 1; }
+      .catHead {
+        padding: 14px 14px;
+        display: flex; align-items: center; justify-content: space-between;
+        background: linear-gradient(90deg, rgba(0,229,255,.10), rgba(255,0,122,.06));
+        border-bottom: 1px solid var(--border);
+      }
+      .catTitle { font-size: 16px; font-weight: 700; }
+      .count { color: var(--muted); font-size: 12px; }
+
+      .items { padding: 10px; display: grid; gap: 10px; }
+      .item {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 12px 12px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 8px;
+      }
+      .itemTitle { font-weight: 700; font-size: 15px; }
+      .itemDesc { color: var(--muted); font-size: 13px; margin-top: 2px; }
+      .price {
+        align-self: start;
+        padding: 8px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(0,229,255,.35);
+        background: rgba(0,229,255,.08);
+        font-weight: 800;
+        letter-spacing: .2px;
+      }
+
+      .footer {
+        margin-top: 18px;
+        color: rgba(255,255,255,.55);
+        font-size: 12px;
+        display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+      }
+
+      .toast {
+        position: fixed;
+        left: 50%;
+        bottom: 18px;
+        transform: translateX(-50%);
+        background: rgba(0,0,0,.75);
+        border: 1px solid var(--border);
+        color: var(--text);
+        padding: 10px 12px;
+        border-radius: 12px;
+        font-size: 13px;
+        display: none;
+        max-width: 92vw;
+      }
+      .toast.show { display: block; }
     </style>
   </head>
 
   <body>
     <div class="wrap">
-      <div class="topbar">
-        <h1>Wosbus Menü</h1>
-        <a class="adminLink" href="/admin/">Admin</a>
+      <header>
+        <div class="brand">
+          <h1>Wosbus Menü</h1>
+          <div class="sub">Güncel menü • hızlı arama • kategori filtre</div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="/admin/" title="Menüyü düzenle">✏️ Admin</a>
+          <a class="btn" href="#" id="shareBtn" title="Linki kopyala">🔗 Paylaş</a>
+        </div>
+      </header>
+
+      <div class="panel">
+        <div>
+          <input id="q" placeholder="Ara: espresso, cheesecake..." />
+          <div class="hint" id="status">Menü yükleniyor…</div>
+        </div>
+
+        <select id="cat">
+          <option value="">Tüm Kategoriler</option>
+          <option>Kahveler</option>
+          <option>Tatlılar</option>
+          <option>İçecekler</option>
+          <option>Yiyecekler</option>
+        </select>
+
+        <select id="onlyActive">
+          <option value="1">Sadece Aktif</option>
+          <option value="0">Tümü (aktif+pasif)</option>
+        </select>
       </div>
 
-      <div id="tabs" class="tabs"></div>
+      <div class="grid" id="grid"></div>
 
-      <div class="card" id="list"></div>
-
-      <div class="note">Fiyatlar değişiklik gösterebilir.</div>
-      <div id="error" class="err" style="display:none"></div>
+      <div class="footer">
+        <div>© Wosbus</div>
+        <div id="meta"></div>
+      </div>
     </div>
 
+    <div class="toast" id="toast"></div>
+
     <script>
-      const tabsEl = document.getElementById("tabs");
-      const listEl = document.getElementById("list");
-      const errEl  = document.getElementById("error");
+      const elGrid = document.getElementById("grid");
+      const elQ = document.getElementById("q");
+      const elCat = document.getElementById("cat");
+      const elOnlyActive = document.getElementById("onlyActive");
+      const elStatus = document.getElementById("status");
+      const elMeta = document.getElementById("meta");
+      const toast = document.getElementById("toast");
 
-      let data = null;
-      let activeIndex = 0;
+      const showToast = (msg) => {
+        toast.textContent = msg;
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 1600);
+      };
 
-      function fmtTRY(n){
-        try { return new Intl.NumberFormat("tr-TR").format(n) + " ₺"; }
-        catch { return n + " ₺"; }
+      document.getElementById("shareBtn").addEventListener("click", async (e) => {
+        e.preventDefault();
+        try {
+          await navigator.clipboard.writeText(location.href);
+          showToast("Link kopyalandı ✅");
+        } catch {
+          showToast("Kopyalanamadı (tarayıcı izin vermedi).");
+        }
+      });
+
+      let rawItems = [];
+
+      function normalize(str) {
+        return (str || "").toString().toLowerCase().trim();
       }
 
-      function render(){
-        if (!data || !data.categories || !data.categories.length) {
-          listEl.innerHTML = "Menü bulunamadı.";
-          tabsEl.innerHTML = "";
+      function groupByCategory(items) {
+        const map = new Map();
+        for (const it of items) {
+          const c = it.category || "Diğer";
+          if (!map.has(c)) map.set(c, []);
+          map.get(c).push(it);
+        }
+        // kategori içi alfabetik
+        for (const [k, arr] of map.entries()) {
+          arr.sort((a,b) => (a.title || "").localeCompare(b.title || "", "tr"));
+        }
+        return map;
+      }
+
+      function render(items) {
+        elGrid.innerHTML = "";
+
+        if (!items.length) {
+          elGrid.innerHTML = `<div style="color: rgba(255,255,255,.65); padding: 12px;">
+            Sonuç yok. Filtreleri değiştir.
+          </div>`;
           return;
         }
 
-        tabsEl.innerHTML = data.categories.map((c, i) => `
-          <div class="tab ${i===activeIndex ? "active":""}" data-i="${i}">${c.name}</div>
-        `).join("");
+        const grouped = groupByCategory(items);
 
-        const cat = data.categories[activeIndex];
-        listEl.innerHTML = (cat.items || []).map(item => `
-          <div class="row">
-            <div>
-              <div class="title">${item.title}</div>
-              ${item.desc ? `<div class="desc">${item.desc}</div>` : ``}
+        for (const [cat, list] of grouped.entries()) {
+          const catEl = document.createElement("section");
+          catEl.className = "cat";
+          catEl.innerHTML = `
+            <div class="catHead">
+              <div class="catTitle">${cat}</div>
+              <div class="count">${list.length} ürün</div>
             </div>
-            <div class="price">${fmtTRY(item.price)}</div>
-          </div>
-        `).join("") || "Bu kategoride ürün yok.";
+            <div class="items"></div>
+          `;
 
-        tabsEl.querySelectorAll(".tab").forEach(el=>{
-          el.addEventListener("click", () => {
-            activeIndex = Number(el.dataset.i);
-            render();
-          });
-        });
-      }
+          const itemsEl = catEl.querySelector(".items");
 
-      async function load(){
-        try{
-          const r = await fetch("/data/menu.json", { cache: "no-store" });
-          if(!r.ok) throw new Error("menu.json okunamadı: " + r.status);
-          data = await r.json();
-          render();
-        }catch(e){
-          errEl.style.display = "block";
-          errEl.textContent = "Menü yüklenemedi: " + e.message;
-          render();
+          for (const it of list) {
+            const price = (typeof it.price === "number") ? it.price : parseFloat(it.price || 0);
+            const itemEl = document.createElement("div");
+            itemEl.className = "item";
+            itemEl.innerHTML = `
+              <div>
+                <div class="itemTitle">${it.title || "-"}</div>
+                ${it.desc ? `<div class="itemDesc">${it.desc}</div>` : ""}
+              </div>
+              <div class="price">${price.toFixed(0)}₺</div>
+            `;
+            itemsEl.appendChild(itemEl);
+          }
+
+          elGrid.appendChild(catEl);
         }
       }
 
-      load();
+      function applyFilters() {
+        const q = normalize(elQ.value);
+        const cat = elCat.value;
+        const onlyActive = elOnlyActive.value === "1";
+
+        let items = rawItems.slice();
+
+        if (onlyActive) items = items.filter(x => x.active !== false);
+
+        if (cat) items = items.filter(x => (x.category || "") === cat);
+
+        if (q) {
+          items = items.filter(x => {
+            const t = normalize(x.title);
+            const d = normalize(x.desc);
+            const c = normalize(x.category);
+            return t.includes(q) || d.includes(q) || c.includes(q);
+          });
+        }
+
+        render(items);
+        elMeta.textContent = `Gösterilen: ${items.length} / Toplam: ${rawItems.length}`;
+      }
+
+      async function loadMenu() {
+        try {
+          elStatus.textContent = "Menü yükleniyor…";
+          const res = await fetch("/data/menu.json", { cache: "no-store" });
+          if (!res.ok) throw new Error("menu.json okunamadı: " + res.status);
+          const data = await res.json();
+          rawItems = Array.isArray(data.items) ? data.items : [];
+          elStatus.textContent = "Hazır ✅";
+          applyFilters();
+        } catch (e) {
+          elStatus.textContent = "Menü yüklenemedi ❌ (data/menu.json kontrol et)";
+          elGrid.innerHTML = `<div style="color:#ffbdbd; padding: 12px;">
+            Menü yüklenemedi. <br/>
+            Hata: ${String(e.message || e)}
+          </div>`;
+        }
+      }
+
+      elQ.addEventListener("input", applyFilters);
+      elCat.addEventListener("change", applyFilters);
+      elOnlyActive.addEventListener("change", applyFilters);
+
+      loadMenu();
     </script>
   </body>
 </html>
