@@ -2,12 +2,24 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "public/uploads"
+publish_mode: simple
+
+media_folder: "uploads"
 public_folder: "/uploads"
 
 collections:
   - name: "menu"
     label: "Menü"
-    file: "content/menu.yml"
+    folder: "content/menu"
+    create: true
+    slug: "{{slug}}"
     fields:
-      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Ürün", name: "title", widget: "string" }
+      - { label: "Fiyat", name: "price", widget: "number", value_type: "float" }
+      - {
+          label: "Kategori",
+          name: "category",
+          widget: "select",
+          options: ["Kahveler", "Tatlılar", "İçecekler", "Yiyecekler"],
+        }
+      - { label: "Aktif mi?", name: "active", widget: "boolean", default: true }
