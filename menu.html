@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0b0b" />
+  <title>Wosbus Menü</title>
+
+  <style>
+    :root{
+      --bg:#0b0b0b; --panel:rgba(255,255,255,.04); --card:#141414;
+      --text:#fff; --muted:rgba(255,255,255,.66);
+      --border:rgba(255,255,255,.10);
+      --accent:#00e5ff; --accent2:#ff007a;
+      --r14:14px; --r16:16px; --r18:18px;
+      --shadow: 0 14px 40px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 520px at 15% 0%, rgba(0,229,255,.18), transparent 60%),
+        radial-gradient(900px 520px at 92% 10%, rgba(255,0,122,.12), transparent 55%),
+        radial-gradient(700px 520px at 50% 110%, rgba(0,229,255,.10), transparent 55%),
+        var(--bg);
+    }
+    .wrap{max-width:980px;margin:0 auto;padding:14px 14px 92px;}
+
+    header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+    .left h1{margin:0;font-size:28px}
+    .left .sub{margin:6px 0 0;color:var(--muted);font-size:13px}
+    .btn{
+      display:inline-flex;gap:8px;align-items:center;justify-content:center;
+      padding:10px 12px;border-radius:14px;border:1px solid var(--border);
+      background:rgba(255,255,255,.04);box-shadow:0 6px 18px rgba(0,0,0,.25);
+      user-select:none; white-space:nowrap;
+    }
+    .btn:active{transform:scale(.98)}
+
+    .sticky{
+      position:sticky; top:0; z-index:10;
+      margin-top:12px;
+      padding:10px 0 10px;
+      background: linear-gradient(180deg, rgba(11,11,11,.96), rgba(11,11,11,.62));
+      backdrop-filter: blur(10px);
+    }
+    .panel{
+      border:1px solid var(--border);
+      background:var(--panel);
+      border-radius:var(--r18);
+      padding:10px;
+      box-shadow:var(--shadow);
+      display:grid; gap:10px;
+    }
+    .row{display:grid;grid-template-columns:1fr 120px;gap:8px;align-items:center}
+    input,select{
+      width:100%;
+      padding:11px 12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.28);
+      color:var(--text);
+      outline:none;
+      font-size:16px;
+    }
+    input::placeholder{color:rgba(255,255,255,.42)}
+
+    .tabs{
+      display:flex; gap:8px; overflow:auto; padding:2px;
+      -webkit-overflow-scrolling:touch; scrollbar-width:none;
+    }
+    .tabs::-webkit-scrollbar{display:none}
+    .tab{
+      flex:0 0 auto;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      font-size:13px;
+      user-select:none;
+    }
+    .tab.active{
+      border-color:rgba(0,229,255,.50);
+      background: linear-gradient(90deg, rgba(0,229,255,.14), rgba(255,0,122,.10));
+    }
+    .meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:rgba(255,255,255,.58);font-size:12px;padding:0 2px}
+
+    .grid{display:grid;gap:10px;margin-top:14px}
+    .item{
+      display:grid;
+      grid-template-columns:72px 1fr auto;
+      gap:12px;
+      padding:12px;
+      background:rgba(20,20,20,.92);
+      border:1px solid var(--border);
+      border-radius:var(--r16);
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+      align-items:start;
+    }
+    .thumb{
+      width:72px;height:72px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+      overflow:hidden;
+      display:flex;align-items:center;justify-content:center;
+      color:rgba(255,255,255,.55);font-size:12px;
+    }
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .name{font-weight:900;font-size:15px;line-height:1.15}
+    .desc{margin-top:4px;color:var(--muted);font-size:13px;line-height:1.25}
+    .price{
+      padding:9px 10px;border-radius:999px;
+      border:1px solid rgba(0,229,255,.35);
+      background:rgba(0,229,255,.10);
+      font-weight:900;white-space:nowrap;margin-left:6px;
+    }
+    .empty{color:rgba(255,255,255,.68);padding:10px 2px;}
+    @media (min-width:760px){
+      .row{grid-template-columns:1fr 160px}
+      .item{grid-template-columns:84px 1fr auto}
+      .thumb{width:84px;height:84px}
+      .left h1{font-size:34px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="left">
+        <h1>Menü</h1>
+        <div class="sub">Sekmelerle kategori seç • Arama • Foto</div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end">
+        <a class="btn" href="/">🏠 Ana Sayfa</a>
+        <a class="btn" href="/admin/">✏️ Admin</a>
+      </div>
+    </header>
+
+    <div class="sticky">
+      <div class="panel">
+        <div class="row">
+          <input id="q" placeholder="Ara: köfte, salata, latte..." autocomplete="off" />
+          <select id="onlyActive">
+            <option value="1">Aktif</option>
+            <option value="0">Tümü</option>
+          </select>
+        </div>
+
+        <div class="tabs" id="tabs"></div>
+
+        <div class="meta">
+          <span id="status">Menü yükleniyor…</span>
+          <span id="meta"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid" id="grid"></div>
+  </div>
+
+<script>
+  const SOURCES = [
+    { cat: "Izgara çeşitler",        url: "/data/menu/izgara-cesitler.json" },
+    { cat: "Salatalar",             url: "/data/menu/salatalar.json" },
+    { cat: "Atıştırmalıklar",       url: "/data/menu/atistirmaliklar.json" },
+    { cat: "Ekmek arası lezzetler", url: "/data/menu/ekmek-arasi-lezzetler.json" },
+    { cat: "Hamburgerler",          url: "/data/menu/hamburgerler.json" },
+    { cat: "Tostlar",               url: "/data/menu/tostlar.json" },
+    { cat: "Kahveler",              url: "/data/menu/kahveler.json" },
+    { cat: "Çaylar",                url: "/data/menu/caylar.json" },
+    { cat: "Kokteyller",            url: "/data/menu/kokteyller.json" },
+    { cat: "Meşrubatlar",           url: "/data/menu/mesrubatlar.json" },
+    { cat: "Tatlı çeşitleri",       url: "/data/menu/tatli-cesitleri.json" },
+    { cat: "Nargile çeşitleri",     url: "/data/menu/nargile-cesitleri.json" },
+  ];
+
+  const elGrid = document.getElementById("grid");
+  const elQ = document.getElementById("q");
+  const elOnlyActive = document.getElementById("onlyActive");
+  const elTabs = document.getElementById("tabs");
+  const elStatus = document.getElementById("status");
+  const elMeta = document.getElementById("meta");
+
+  const norm = (s) => (s ?? "").toString().toLowerCase().trim();
+  const fmtTRY = (n) => {
+    const num = typeof n === "number" ? n : parseFloat(n || 0);
+    const v = Number.isFinite(num) ? Math.round(num) : n;
+    return `${v}₺`;
+  };
+
+  let allItems = [];
+  let activeTab = "Tümü";
+
+  function makeTabs(){
+    elTabs.innerHTML = "";
+    const cats = ["Tümü", ...SOURCES.map(s=>s.cat)];
+    for (const c of cats){
+      const b = document.createElement("button");
+      b.className = "tab" + (activeTab === c ? " active" : "");
+      b.textContent = c;
+      b.onclick = () => { activeTab = c; makeTabs(); apply(); };
+      elTabs.appendChild(b);
+    }
+  }
+
+  function render(items){
+    elGrid.innerHTML = "";
+    if (!items.length){
+      elGrid.innerHTML = `<div class="empty">Sonuç yok. Aramayı/sekme filtresini değiştir.</div>`;
+      return;
+    }
+    for (const it of items){
+      const img = it.image ? String(it.image) : "";
+      const desc = it.desc || "";
+      const card = document.createElement("div");
+      card.className = "item";
+      card.innerHTML = `
+        <div class="thumb">${img ? `<img src="${img}" alt="">` : "Wosbus"}</div>
+        <div>
+          <div class="name">${it.title || "-"}</div>
+          ${desc ? `<div class="desc">${desc}</div>` : ``}
+        </div>
+        <div class="price">${fmtTRY(it.price)}</div>
+      `;
+      elGrid.appendChild(card);
+    }
+  }
+
+  function apply(){
+    const q = norm(elQ.value);
+    const onlyActive = elOnlyActive.value === "1";
+
+    let items = allItems.slice();
+    if (onlyActive) items = items.filter(x => x.active !== false);
+    if (activeTab !== "Tümü") items = items.filter(x => x.category === activeTab);
+
+    if (q){
+      items = items.filter(x =>
+        norm(x.title).includes(q) || norm(x.desc).includes(q) || norm(x.category).includes(q)
+      );
+    }
+
+    // A-Z
+    items.sort((a,b)=>(a.title||"").localeCompare(b.title||"","tr"));
+
+    render(items);
+    elMeta.textContent = `Gösterilen: ${items.length} / Toplam: ${allItems.length}`;
+  }
+
+  async function load(){
+    try{
+      elStatus.textContent = "Menü yükleniyor…";
+      makeTabs();
+
+      const results = await Promise.all(
+        SOURCES.map(async (s) => {
+          const res = await fetch(s.url + "?v=" + Date.now(), { cache: "no-store" });
+          if (!res.ok) throw new Error(`${s.url} okunamadı: ${res.status}`);
+          const data = await res.json();
+          const items = Array.isArray(data.items) ? data.items : [];
+          return items.map(it => ({ ...it, category: s.cat }));
+        })
+      );
+
+      allItems = results.flat();
+      elStatus.textContent = "Hazır ✅";
+      apply();
+    }catch(e){
+      elStatus.textContent = "Menü yüklenemedi ❌";
+      elGrid.innerHTML = `<div class="empty" style="color:#ffbdbd">Hata: ${String(e.message||e)}</div>`;
+    }
+  }
+
+  elQ.addEventListener("input", apply);
+  elOnlyActive.addEventListener("change", apply);
+
+  load();
+</script>
+</body>
+</html>
