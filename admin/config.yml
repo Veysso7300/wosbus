@@ -11,38 +11,42 @@ collections:
   - name: "menu"
     label: "Menü"
     files:
-      - name: "menu"
-        label: "Menü Öğeleri"
-        file: "data/menu.json"
+      - name: "kahveler"
+        label: "☕ Kahveler"
+        file: "data/menu/kahveler.json"
         format: "json"
-        editor:
-          preview: false
-        fields:
+        editor: { preview: false }
+        fields: &item_fields
           - label: "Ürünler"
             name: "items"
             widget: "list"
             collapsed: true
             minimize_collapsed: true
-            allow_add: true
-            summary: >
-              {{fields.active}} • {{fields.category}} • {{fields.title}} — {{fields.price}}₺
+            summary: "{{fields.active}} • {{fields.title}} — {{fields.price}}₺"
             fields:
               - { label: "Aktif", name: "active", widget: "boolean", default: true }
-
               - { label: "Ürün Adı", name: "title", widget: "string" }
-
-              - label: "Kategori"
-                name: "category"
-                widget: "select"
-                options: ["Kahveler", "Tatlılar", "İçecekler", "Yiyecekler"]
-
-              - label: "Fiyat (₺)"
-                name: "price"
-                widget: "number"
-                value_type: "float"
-                min: 0
-                default: 0
-
+              - { label: "Fiyat (₺)", name: "price", widget: "number", value_type: "float", min: 0, default: 0 }
               - { label: "Fotoğraf", name: "image", widget: "image", required: false }
+              - { label: "Açıklama", name: "desc", widget: "string", required: false, hint: "Kısa tut (5–8 kelime)" }
 
-              - { label: "Açıklama", name: "desc", widget: "string", required: false, hint: "Kısa tut (örn. 5–8 kelime)" }
+      - name: "tatlilar"
+        label: "🍰 Tatlılar"
+        file: "data/menu/tatlilar.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields
+
+      - name: "icecekler"
+        label: "🥤 İçecekler"
+        file: "data/menu/icecekler.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields
+
+      - name: "yiyecekler"
+        label: "🥪 Yiyecekler"
+        file: "data/menu/yiyecekler.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields
