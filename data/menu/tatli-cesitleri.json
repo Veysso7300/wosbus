@@ -3,57 +3,68 @@
     {
       "active": true,
       "title": "NAŞKIM",
-      "price": 260
+      "price": 260,
+      "image": "/uploads/naşkım.jpg"
     },
     {
       "active": true,
       "title": "PROFİTEROLLÜ PASTA",
-      "price": 260
+      "price": 260,
+      "image": "/uploads/profpasta.jpg"
     },
     {
       "active": true,
       "title": "MONO LATTE",
-      "price": 260
+      "price": 260,
+      "image": "/uploads/monolatte.jpg"
     },
     {
       "active": true,
       "title": "BELLA PASTA",
-      "price": 260
+      "price": 260,
+      "image": "/uploads/bella.jpg"
     },
     {
       "active": true,
       "title": "ÇİKOLATALI FISTIKLI PASTA",
-      "price": 260
+      "price": 260,
+      "image": "/uploads/çikolatalıfıstıklı.jpg"
     },
     {
       "active": true,
       "title": "ÇİKOLATA ŞÖLENİ",
-      "price": 260
+      "price": 260,
+      "image": "/uploads/çikolataşöleni.jpg"
     },
     {
       "active": true,
       "title": "FISTIK ŞÖLENİ",
-      "price": 260
+      "price": 260,
+      "image": "/uploads/fıstıkşöleni.jpg"
     },
     {
       "active": true,
       "title": "SUFLE",
-      "price": 260
+      "price": 260,
+      "image": "/uploads/sufle.jpg"
     },
     {
       "active": true,
       "title": "ORMAN MEYVELİ PASTA",
-      "price": 260
+      "price": 260,
+      "image": "/uploads/ormanmeyveli.jpg"
     },
     {
       "active": true,
       "title": "MOZAİK PASTA",
-      "price": 260
+      "price": 260,
+      "image": "/uploads/mozaik.jpg"
     },
     {
       "active": true,
       "title": "RED VELVET",
-      "price": 260
+      "price": 260,
+      "image": "/uploads/redvelvet.jpg"
     }
   ]
 }
