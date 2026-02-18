@@ -3,92 +3,110 @@
     {
       "active": true,
       "title": "NESCAFE",
-      "price": 60
+      "price": 60,
+      "image": "/uploads/nescafe.jpg"
     },
     {
       "active": true,
       "title": "SÜTLÜ NESCAFE",
-      "price": 80
+      "price": 80,
+      "image": "/uploads/sütlünescafe.jpg"
     },
     {
       "active": true,
       "title": "CAPPUCINO",
-      "price": 150
+      "price": 150,
+      "image": "/uploads/cappucino.jpg"
     },
     {
       "active": true,
       "title": "MOCHA",
-      "price": 180
+      "price": 180,
+      "image": "/uploads/mocha.jpg"
     },
     {
       "active": true,
       "title": "LATTE",
-      "price": 180
+      "price": 180,
+      "image": "/uploads/latte.jpg"
     },
     {
       "active": true,
       "title": "MACCHIATO",
-      "price": 180
+      "price": 180,
+      "image": "/uploads/macchıato.webp"
     },
     {
       "active": true,
       "title": "ESPRESSO",
-      "price": 100
+      "price": 100,
+      "image": "/uploads/espresso.jpg"
     },
     {
       "active": true,
       "title": "DOUBLE ESPRESSO",
-      "price": 150
+      "price": 150,
+      "image": "/uploads/dblespresso.jpg"
     },
     {
       "active": true,
       "title": "SAHLEP",
-      "price": 160
+      "price": 160,
+      "image": "/uploads/sahlep.jpg"
     },
     {
       "active": true,
       "title": "AMERICANO",
-      "price": 150
+      "price": 150,
+      "image": "/uploads/americano-kahve-nedir-nasil-yapilir-9-fas.webp"
     },
     {
       "active": true,
       "title": "FİLTRE KAHVE ",
-      "price": 150
+      "price": 150,
+      "image": "/uploads/filtre.webp"
     },
     {
       "active": true,
       "title": "TÜRK KAHVESİ",
-      "price": 100
+      "price": 100,
+      "image": "/uploads/türk kahvesi.jpg"
     },
     {
       "active": true,
       "title": "SÜTLÜ TÜRK KAHVESİ",
-      "price": 100
+      "price": 100,
+      "image": "/uploads/türk kahvesi sütlü.jpg"
     },
     {
       "active": true,
       "title": "MENENGİÇ",
-      "price": 100
+      "price": 100,
+      "image": "/uploads/menengiç.jpg"
     },
     {
       "active": true,
       "title": "DİBEK",
-      "price": 100
+      "price": 100,
+      "image": "/uploads/dibek.webp"
     },
     {
       "active": true,
       "title": "DAMLA SAKIZLI TÜRK KAHVESİ",
-      "price": 98
+      "price": 98,
+      "image": "/uploads/türk kahvesi damla sakızlı.jpg"
     },
     {
       "active": true,
       "title": "ICED LATTE",
-      "price": 180
+      "price": 180,
+      "image": "/uploads/ıcedlatte.jpg"
     },
     {
       "active": true,
       "title": "FRAPPE",
-      "price": 180
+      "price": 180,
+      "image": "/uploads/frappe.jpg"
     }
   ]
 }
