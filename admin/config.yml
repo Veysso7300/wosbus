@@ -29,5 +29,6 @@ collections:
                 name: "category"
                 widget: "select"
                 options: ["Kahveler", "Tatlılar", "İçecekler", "Yiyecekler"]
-              - { label: "Açıklama", name: "description", widget: "text", required: false }
+              - { label: "Açıklama", name: "desc", widget: "text", required: false }
               - { label: "Aktif mi?", name: "active", widget: "boolean", default: true }
+
