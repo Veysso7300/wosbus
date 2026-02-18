@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: main   # senin branch adın neyse (main/master)
 
 media_folder: "uploads"
 public_folder: "/uploads"
@@ -11,7 +11,7 @@ collections:
   - name: "menu"
     label: "Menü"
     files:
-      - name: "menu"
+      - name: "menuData"
         label: "Menü Verisi"
         file: "data/menu.json"
         format: "json"
@@ -20,12 +20,11 @@ collections:
             name: "categories"
             widget: "list"
             fields:
-              - { label: "Kategori Adı", name: "title", widget: "string" }
-              - { label: "Slug (kahveler gibi)", name: "slug", widget: "string" }
+              - { label: "Kategori Adı", name: "name", widget: "string" }
               - label: "Ürünler"
                 name: "items"
                 widget: "list"
                 fields:
-                  - { label: "Ürün Adı", name: "name", widget: "string" }
-                  - { label: "Fiyat", name: "price", widget: "number", value_type: "int" }
-                  - { label: "Açıklama", name: "description", widget: "string", required: false }
+                  - { label: "Ürün Adı", name: "title", widget: "string" }
+                  - { label: "Fiyat (₺)", name: "price", widget: "number", value_type: "int", min: 0 }
+                  - { label: "Açıklama", name: "desc", widget: "string", required: false }
