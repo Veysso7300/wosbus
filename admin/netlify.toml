@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# (Bu site SPA değil. O yüzden /* -> /index.html YOK.)

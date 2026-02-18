@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "menu"
+    label: "Menü"
+    files:
+      - name: "menu"
+        label: "Menü Verisi"
+        file: "data/menu.json"
+        format: "json"
+        fields:
+          - label: "Kategoriler"
+            name: "categories"
+            widget: "list"
+            fields:
+              - { label: "Kategori Adı", name: "title", widget: "string" }
+              - { label: "Slug (kahveler gibi)", name: "slug", widget: "string" }
+              - label: "Ürünler"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Ürün Adı", name: "name", widget: "string" }
+                  - { label: "Fiyat", name: "price", widget: "number", value_type: "int" }
+                  - { label: "Açıklama", name: "description", widget: "string", required: false }
