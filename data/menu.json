@@ -1,18 +1,16 @@
 {
   "categories": [
     {
-      "title": "Kahveler",
-      "slug": "kahveler",
+      "name": "Kahveler",
       "items": [
-        { "name": "Espresso", "price": 80, "description": "Single shot" },
-        { "name": "Latte", "price": 110, "description": "Sütlü" }
+        { "title": "Espresso", "price": 80, "desc": "" },
+        { "title": "Latte", "price": 110, "desc": "" }
       ]
     },
     {
-      "title": "Tatlılar",
-      "slug": "tatlilar",
+      "name": "Tatlılar",
       "items": [
-        { "name": "Cheesecake", "price": 140, "description": "Günlük" }
+        { "title": "Cheesecake", "price": 140, "desc": "" }
       ]
     }
   ]
