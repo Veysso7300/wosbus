@@ -1,17 +1,18 @@
 {
-  "categories": [
+  "items": [
     {
-      "name": "Kahveler",
-      "items": [
-        { "title": "Espresso", "price": 80, "desc": "" },
-        { "title": "Latte", "price": 110, "desc": "" }
-      ]
+      "title": "Espresso",
+      "desc": "Single shot",
+      "price": 80,
+      "category": "Kahveler",
+      "active": true
     },
     {
-      "name": "Tatlılar",
-      "items": [
-        { "title": "Cheesecake", "price": 140, "desc": "" }
-      ]
+      "title": "Cheesecake",
+      "desc": "Günlük",
+      "price": 140,
+      "category": "Tatlılar",
+      "active": true
     }
   ]
 }
