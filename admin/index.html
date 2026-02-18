@@ -5,19 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Wosbus Admin</title>
 
-    <!-- Netlify Identity (ŞART) -->
+    <!-- Netlify Identity -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     <!-- Decap CMS -->
-    <script defer src="https://unpkg.com/decap-cms@^3.1.0/dist/decap-cms.js"></script>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
     <style>
-      html, body { height: 100%; margin: 0; }
+      body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif; }
     </style>
   </head>
+
   <body>
     <script>
-      // Login olunca admin'e geri dön (redirect loop yapmasın diye basit)
+      // ✅ Decap'in config.yml fetch etmesini kapat
+      window.CMS_MANUAL_INIT = true;
+
+      // ✅ Config'i direkt burada veriyoruz (YAML fetch yok)
+      const config = {
+        backend: { name: "git-gateway", branch: "main" },
+        publish_mode: "simple",
+        media_folder: "uploads",
+        public_folder: "/uploads",
+        collections: [
+          {
+            name: "menu",
+            label: "Menü",
+            folder: "content/menu",
+            create: true,
+            slug: "{{slug}}",
+            fields: [
+              { label: "Ürün", name: "title", widget: "string" },
+              { label: "Fiyat", name: "price", widget: "number", value_type: "float", min: 0 },
+              {
+                label: "Kategori",
+                name: "category",
+                widget: "select",
+                options: ["Kahveler", "Tatlılar", "İçecekler", "Yiyecekler"],
+              },
+              { label: "Açıklama", name: "description", widget: "text", required: false },
+              { label: "Aktif mi?", name: "active", widget: "boolean", default: true },
+            ],
+          },
+        ],
+      };
+
+      // DOM hazır olunca başlat
+      window.addEventListener("load", () => {
+        CMS.init({ config });
+      });
+
+      // Netlify Identity login sonrası /admin'e dön
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("login", () => {
           document.location.href = "/admin/";
