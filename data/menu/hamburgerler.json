@@ -1,1 +1,24 @@
-{ "items": [] }
+{
+  "items": [
+    {
+      "active": true,
+      "title": "KLASİK BURGER",
+      "price": 180
+    },
+    {
+      "active": true,
+      "title": "KLASİK CHEESEBURGER",
+      "price": 200
+    },
+    {
+      "active": true,
+      "title": "DOUBLE BURGER",
+      "price": 250
+    },
+    {
+      "active": true,
+      "title": "TAVUK BURGER",
+      "price": 160
+    }
+  ]
+}
