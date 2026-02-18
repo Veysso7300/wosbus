@@ -1,131 +1,141 @@
 <!doctype html>
 <html lang="tr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Wosbus Menü</title>
-  <style>
-    :root { color-scheme: dark; }
-    body{
-      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
-      background:#0b0b0b; color:#fff;
-    }
-    .wrap{ max-width:900px; margin:0 auto; padding:40px 16px; }
-    h1{ margin:0 0 18px; font-size:44px; letter-spacing:.2px; }
-    .tabs{ display:flex; gap:10px; margin:12px 0 22px; flex-wrap:wrap; }
-    .tab{
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.04);
-      color:#fff; padding:10px 14px; border-radius:12px;
-      cursor:pointer; user-select:none;
-    }
-    .tab.active{ border-color:rgba(255,255,255,.35); background:rgba(255,255,255,.10); }
-    .card{
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(255,255,255,.04);
-      border-radius:16px; padding:18px; margin:10px 0;
-      display:flex; align-items:center; justify-content:space-between;
-    }
-    .name{ font-size:18px; font-weight:600; }
-    .desc{ opacity:.75; font-size:13px; margin-top:4px; }
-    .price{ font-size:18px; font-weight:700; }
-    .hint{ opacity:.6; font-size:12px; margin-top:22px; text-align:center; }
-    .err{ color:#ff6b6b; border:1px solid rgba(255,107,107,.35); padding:12px 14px; border-radius:12px; background:rgba(255,107,107,.08); }
-    .topbar{ display:flex; gap:10px; align-items:center; justify-content:space-between; margin-bottom:10px; }
-    .smallbtn{
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.04);
-      color:#fff; padding:8px 12px; border-radius:12px;
-      cursor:pointer; font-size:13px; opacity:.9;
-    }
-    a{ color:#9ad0ff; }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <div class="topbar">
-      <h1>Wosbus Menü</h1>
-      <a class="smallbtn" href="/admin/">Admin</a>
+  <head>
+    <meta charset="utf-8" />
+    <title>Wosbus Menü</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root { color-scheme: dark; }
+      body{
+        margin:0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif;
+        background:#0b0b0b;
+        color:#fff;
+      }
+      .wrap{ max-width: 900px; margin: 0 auto; padding: 28px 18px 60px; }
+      h1{ margin: 0 0 14px; font-size: 42px; letter-spacing: .2px; }
+      .tabs{ display:flex; gap:10px; margin: 14px 0 22px; flex-wrap: wrap; }
+      .tab{
+        border:1px solid rgba(255,255,255,.14);
+        background: rgba(255,255,255,.04);
+        color:#fff;
+        padding: 10px 14px;
+        border-radius: 12px;
+        cursor:pointer;
+        user-select:none;
+      }
+      .tab.active{ background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.22); }
+      .card{
+        border:1px solid rgba(255,255,255,.10);
+        background: rgba(255,255,255,.03);
+        border-radius: 18px;
+        padding: 14px;
+      }
+      .row{
+        display:flex;
+        align-items:flex-start;
+        justify-content:space-between;
+        gap: 14px;
+        padding: 14px 12px;
+        border-radius: 14px;
+      }
+      .row + .row{ margin-top: 8px; }
+      .row:hover{ background: rgba(255,255,255,.04); }
+      .title{ font-weight: 650; font-size: 18px; }
+      .desc{ opacity:.75; margin-top: 4px; font-size: 13px; }
+      .price{ font-weight:700; white-space: nowrap; }
+      .note{ opacity:.55; text-align:center; margin-top: 18px; font-size: 12px; }
+      .err{
+        margin-top:18px;
+        border:1px solid rgba(255,80,80,.35);
+        background: rgba(255,80,80,.10);
+        padding: 12px 14px;
+        border-radius: 12px;
+        color:#ffd0d0;
+      }
+      .topbar{ display:flex; justify-content:space-between; align-items:center; gap:10px; }
+      .adminLink{
+        font-size: 13px; opacity:.75; text-decoration:none; color:#fff;
+        border:1px solid rgba(255,255,255,.14);
+        padding: 8px 10px; border-radius: 12px;
+        background: rgba(255,255,255,.04);
+      }
+      .adminLink:hover{ opacity: 1; }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="topbar">
+        <h1>Wosbus Menü</h1>
+        <a class="adminLink" href="/admin/">Admin</a>
+      </div>
+
+      <div id="tabs" class="tabs"></div>
+
+      <div class="card" id="list"></div>
+
+      <div class="note">Fiyatlar değişiklik gösterebilir.</div>
+      <div id="error" class="err" style="display:none"></div>
     </div>
 
-    <div id="status"></div>
-    <div class="tabs" id="tabs"></div>
-    <div id="list"></div>
-    <div class="hint">Fiyatlar değişiklik gösterebilir.</div>
-  </div>
+    <script>
+      const tabsEl = document.getElementById("tabs");
+      const listEl = document.getElementById("list");
+      const errEl  = document.getElementById("error");
 
-  <script>
-    const $tabs = document.getElementById("tabs");
-    const $list = document.getElementById("list");
-    const $status = document.getElementById("status");
+      let data = null;
+      let activeIndex = 0;
 
-    function moneyTRY(n){
-      // 80 -> "80 ₺"
-      if (typeof n === "number") return `${n} ₺`;
-      return String(n || "");
-    }
-
-    function setError(msg){
-      $status.innerHTML = `<div class="err">${msg}</div>`;
-    }
-
-    function clearError(){ $status.innerHTML = ""; }
-
-    function render(data){
-      const cats = (data && data.categories) ? data.categories : [];
-      if (!cats.length){
-        setError("Menü boş görünüyor. admin panelinden ürün ekleyebilirsin.");
-        return;
-      }
-      clearError();
-
-      let active = cats[0].slug;
-
-      function drawTabs(){
-        $tabs.innerHTML = "";
-        cats.forEach(c => {
-          const b = document.createElement("button");
-          b.className = "tab" + (c.slug === active ? " active" : "");
-          b.textContent = c.title;
-          b.onclick = () => { active = c.slug; drawTabs(); drawList(); };
-          $tabs.appendChild(b);
-        });
+      function fmtTRY(n){
+        try { return new Intl.NumberFormat("tr-TR").format(n) + " ₺"; }
+        catch { return n + " ₺"; }
       }
 
-      function drawList(){
-        $list.innerHTML = "";
-        const cat = cats.find(c => c.slug === active) || cats[0];
-        (cat.items || []).forEach(it => {
-          const row = document.createElement("div");
-          row.className = "card";
-          row.innerHTML = `
+      function render(){
+        if (!data || !data.categories || !data.categories.length) {
+          listEl.innerHTML = "Menü bulunamadı.";
+          tabsEl.innerHTML = "";
+          return;
+        }
+
+        tabsEl.innerHTML = data.categories.map((c, i) => `
+          <div class="tab ${i===activeIndex ? "active":""}" data-i="${i}">${c.name}</div>
+        `).join("");
+
+        const cat = data.categories[activeIndex];
+        listEl.innerHTML = (cat.items || []).map(item => `
+          <div class="row">
             <div>
-              <div class="name">${it.name || ""}</div>
-              ${it.description ? `<div class="desc">${it.description}</div>` : ""}
+              <div class="title">${item.title}</div>
+              ${item.desc ? `<div class="desc">${item.desc}</div>` : ``}
             </div>
-            <div class="price">${moneyTRY(it.price)}</div>
-          `;
-          $list.appendChild(row);
+            <div class="price">${fmtTRY(item.price)}</div>
+          </div>
+        `).join("") || "Bu kategoride ürün yok.";
+
+        tabsEl.querySelectorAll(".tab").forEach(el=>{
+          el.addEventListener("click", () => {
+            activeIndex = Number(el.dataset.i);
+            render();
+          });
         });
       }
 
-      drawTabs();
-      drawList();
-    }
+      async function load(){
+        try{
+          const r = await fetch("/data/menu.json", { cache: "no-store" });
+          if(!r.ok) throw new Error("menu.json okunamadı: " + r.status);
+          data = await r.json();
+          render();
+        }catch(e){
+          errEl.style.display = "block";
+          errEl.textContent = "Menü yüklenemedi: " + e.message;
+          render();
+        }
+      }
 
-    // Menü yükle
-    fetch("/data/menu.json", { cache: "no-store" })
-      .then(async r => {
-        const txt = await r.text();
-        if (!r.ok) throw new Error("menu.json HTTP " + r.status);
-        if (txt.trim().startsWith("<")) throw new Error("menu.json yerine HTML geliyor (redirect/dosya yolu hatası)");
-        return JSON.parse(txt);
-      })
-      .then(render)
-      .catch(err => {
-        console.error(err);
-        setError("Menü yüklenemedi: " + err.message);
-      });
-  </script>
-</body>
+      load();
+    </script>
+  </body>
 </html>
