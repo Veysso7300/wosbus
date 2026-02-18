@@ -16,10 +16,12 @@ collections:
     fields:
       - { label: "Ürün", name: "title", widget: "string" }
       - { label: "Fiyat", name: "price", widget: "number", value_type: "float" }
-      - {
-          label: "Kategori",
-          name: "category",
-          widget: "select",
-          options: ["Kahveler", "Tatlılar", "İçecekler", "Yiyecekler"],
-        }
+      - label: "Kategori"
+        name: "category"
+        widget: "select"
+        options:
+          - Kahveler
+          - Tatlılar
+          - İçecekler
+          - Yiyecekler
       - { label: "Aktif mi?", name: "active", widget: "boolean", default: true }
