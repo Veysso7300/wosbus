@@ -1,1 +1,49 @@
-{ "items": [] }
+{
+  "items": [
+    {
+      "active": true,
+      "title": "STRAWBERRY",
+      "price": 130
+    },
+    {
+      "active": true,
+      "title": "MEYVE ŞÖLENİ",
+      "price": 130
+    },
+    {
+      "active": true,
+      "title": "KIDS CUP",
+      "price": 130
+    },
+    {
+      "active": true,
+      "title": "SAKLI KARIŞIK",
+      "price": 130
+    },
+    {
+      "active": true,
+      "title": "ÇİLEKLİ MILKSHAKE",
+      "price": 180
+    },
+    {
+      "active": true,
+      "title": "ÇİKOLATALI MILKSHAKE",
+      "price": 180
+    },
+    {
+      "active": true,
+      "title": "VANİLYALI MILKSHAKE",
+      "price": 181
+    },
+    {
+      "active": true,
+      "title": "OREOLU MILKSHAKE",
+      "price": 180
+    },
+    {
+      "active": true,
+      "title": "MUZLU MILKSHAKE",
+      "price": 180
+    }
+  ]
+}
