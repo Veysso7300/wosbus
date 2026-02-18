@@ -3,17 +3,20 @@
     {
       "active": true,
       "title": "AKDENİZ SALATASI",
-      "price": 150
+      "price": 150,
+      "image": "/uploads/beyaz-peynirli-akdeniz-salatasi.webp"
     },
     {
       "active": true,
       "title": "TON BALIKLI SALATA",
-      "price": 200
+      "price": 200,
+      "image": "/uploads/TONBALIK.jpg"
     },
     {
       "active": true,
       "title": "IZGARA TAVUK SALATASI",
-      "price": 192
+      "price": 200,
+      "image": "/uploads/IZGARATAVUKSALATA.jpg"
     }
   ]
 }
