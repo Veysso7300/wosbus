@@ -1,1 +1,19 @@
-{ "items": [] }
+{
+  "items": [
+    {
+      "active": true,
+      "title": "AKDENİZ SALATASI",
+      "price": 150
+    },
+    {
+      "active": true,
+      "title": "TON BALIKLI SALATA",
+      "price": 200
+    },
+    {
+      "active": true,
+      "title": "IZGARA TAVUK SALATASI",
+      "price": 192
+    }
+  ]
+}
