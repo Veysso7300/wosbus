@@ -3,44 +3,52 @@
     {
       "active": true,
       "title": "NUGGET PORSİYON",
-      "price": 200
+      "price": 200,
+      "image": "/uploads/NUGGETPORS.gif"
     },
     {
       "active": true,
       "title": "ŞİNİTZEL PORSİYON",
-      "price": 200
+      "price": 200,
+      "image": "/uploads/ŞİNİTPORS.jpg"
     },
     {
       "active": true,
       "title": "SOSİS PORSİYON",
-      "price": 200
+      "price": 200,
+      "image": "/uploads/SOSİSPORS.jpg"
     },
     {
       "active": true,
       "title": "ÇITIR TAVUK",
-      "price": 199
+      "price": 200,
+      "image": "/uploads/ÇITIRTAVUK.jpg"
     },
     {
       "active": true,
       "title": "PATATES CİPSİ",
-      "price": 119
+      "price": 120,
+      "image": "/uploads/CİPS.jpeg"
     },
     {
       "active": true,
       "title": "WOSBUS TABAĞI",
-      "price": 179
+      "price": 180,
+      "image": "/uploads/WOSBUSTABAK.jpg"
     },
     {
       "active": true,
       "title": "SİGARA BÖREĞİ",
       "price": 100,
-      "desc": "8 ADET"
+      "desc": "8 ADET",
+      "image": "/uploads/SİGARA.webp"
     },
     {
       "active": true,
       "title": "SOĞAN HALKASI",
       "price": 100,
-      "desc": "8 ADET"
+      "desc": "8 ADET",
+      "image": "/uploads/soğanhalkasi.webp"
     }
   ]
 }
