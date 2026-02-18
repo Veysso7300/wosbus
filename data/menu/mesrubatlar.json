@@ -3,52 +3,62 @@
     {
       "active": true,
       "title": "REDBULL",
-      "price": 100
+      "price": 100,
+      "image": "/uploads/redbull.avif"
     },
     {
       "active": true,
       "title": "KOLA",
-      "price": 80
+      "price": 80,
+      "image": "/uploads/kola.jpg"
     },
     {
       "active": true,
       "title": "FANTA",
-      "price": 80
+      "price": 80,
+      "image": "/uploads/fanta.jpg"
     },
     {
       "active": true,
       "title": "MEYVE SUYU",
-      "price": 80
+      "price": 80,
+      "image": "/uploads/meyvesuyu.jpg"
     },
     {
       "active": true,
       "title": "SPRİTE",
-      "price": 80
+      "price": 80,
+      "image": "/uploads/sprite.webp"
     },
     {
       "active": true,
       "title": "ORALET",
-      "price": 25
+      "price": 25,
+      "image": "/uploads/oralet.jpg"
     },
     {
       "active": true,
       "title": "LİMONATA",
-      "price": 80
+      "price": 80,
+      "image": "/uploads/limonata.jpg"
     },
     {
       "active": true,
       "title": "MADEN SUYU (SADE)",
-      "price": 30
+      "price": 30,
+      "image": "/uploads/sadesoda.jpg"
     },
     {
       "active": true,
       "title": "MADEN SUYU (MEYVELİ)",
-      "price": 40
+      "price": 40,
+      "image": "/uploads/meyveli soda.jpg"
     },
     {
       "active": true,
       "title": "ICED TEA",
-      "price": 80
+      "price": 80,
+      "image": "/uploads/ıcedtea.jpg"
     }
   ]
 }
