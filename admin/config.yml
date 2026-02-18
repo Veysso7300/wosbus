@@ -10,18 +10,21 @@ public_folder: "/uploads"
 collections:
   - name: "menu"
     label: "Menü"
-    folder: "content/menu"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Ürün", name: "title", widget: "string" }
-      - { label: "Fiyat", name: "price", widget: "number", value_type: "float" }
-      - label: "Kategori"
-        name: "category"
-        widget: "select"
-        options:
-          - Kahveler
-          - Tatlılar
-          - İçecekler
-          - Yiyecekler
-      - { label: "Aktif mi?", name: "active", widget: "boolean", default: true }
+    files:
+      - file: "data/menu.json"
+        label: "Menü Öğeleri"
+        name: "menu_items"
+        fields:
+          - label: "Öğeler"
+            name: "items"
+            widget: list
+            summary: "{{fields.title}} — {{fields.price}}₺"
+            fields:
+              - { label: "Ürün", name: "title", widget: string }
+              - { label: "Açıklama", name: "desc", widget: string, required: false }
+              - { label: "Fiyat (₺)", name: "price", widget: number, value_type: float, min: 0 }
+              - label: "Kategori"
+                name: "category"
+                widget: select
+                options: ["Kahveler", "Tatlılar", "İçecekler", "Yiyecekler"]
+              - { label: "Aktif mi?", name: "active", widget: boolean, default: true }
