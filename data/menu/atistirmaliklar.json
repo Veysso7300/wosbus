@@ -1,1 +1,46 @@
-{ "items": [] }
+{
+  "items": [
+    {
+      "active": true,
+      "title": "NUGGET PORSİYON",
+      "price": 200
+    },
+    {
+      "active": true,
+      "title": "ŞİNİTZEL PORSİYON",
+      "price": 200
+    },
+    {
+      "active": true,
+      "title": "SOSİS PORSİYON",
+      "price": 200
+    },
+    {
+      "active": true,
+      "title": "ÇITIR TAVUK",
+      "price": 199
+    },
+    {
+      "active": true,
+      "title": "PATATES CİPSİ",
+      "price": 119
+    },
+    {
+      "active": true,
+      "title": "WOSBUS TABAĞI",
+      "price": 179
+    },
+    {
+      "active": true,
+      "title": "SİGARA BÖREĞİ",
+      "price": 100,
+      "desc": "8 ADET"
+    },
+    {
+      "active": true,
+      "title": "SOĞAN HALKASI",
+      "price": 100,
+      "desc": "8 ADET"
+    }
+  ]
+}
