@@ -1,1 +1,54 @@
-{ "items": [] }
+{
+  "items": [
+    {
+      "active": true,
+      "title": "REDBULL",
+      "price": 100
+    },
+    {
+      "active": true,
+      "title": "KOLA",
+      "price": 80
+    },
+    {
+      "active": true,
+      "title": "FANTA",
+      "price": 80
+    },
+    {
+      "active": true,
+      "title": "MEYVE SUYU",
+      "price": 80
+    },
+    {
+      "active": true,
+      "title": "SPRİTE",
+      "price": 80
+    },
+    {
+      "active": true,
+      "title": "ORALET",
+      "price": 25
+    },
+    {
+      "active": true,
+      "title": "LİMONATA",
+      "price": 80
+    },
+    {
+      "active": true,
+      "title": "MADEN SUYU (SADE)",
+      "price": 30
+    },
+    {
+      "active": true,
+      "title": "MADEN SUYU (MEYVELİ)",
+      "price": 40
+    },
+    {
+      "active": true,
+      "title": "ICED TEA",
+      "price": 80
+    }
+  ]
+}
