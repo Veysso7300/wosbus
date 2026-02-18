@@ -3,47 +3,56 @@
     {
       "active": true,
       "title": "STRAWBERRY",
-      "price": 130
+      "price": 130,
+      "image": "/uploads/çilek.jpg"
     },
     {
       "active": true,
       "title": "MEYVE ŞÖLENİ",
-      "price": 130
+      "price": 130,
+      "image": "/uploads/meyveşölem.jpg"
     },
     {
       "active": true,
       "title": "KIDS CUP",
-      "price": 130
+      "price": 130,
+      "image": "/uploads/kids.jpg"
     },
     {
       "active": true,
       "title": "SAKLI KARIŞIK",
-      "price": 130
+      "price": 130,
+      "image": "/uploads/saklıkarışık.jpg"
     },
     {
       "active": true,
       "title": "ÇİLEKLİ MILKSHAKE",
-      "price": 180
+      "price": 180,
+      "image": "/uploads/çileklimilk.jpg"
     },
     {
       "active": true,
       "title": "ÇİKOLATALI MILKSHAKE",
-      "price": 180
+      "price": 180,
+      "image": "/uploads/çikolatamilk.jpg"
     },
     {
       "active": true,
       "title": "VANİLYALI MILKSHAKE",
-      "price": 181
+      "price": 181,
+      "image": "/uploads/vanilyamilk.jpg"
     },
     {
       "active": true,
       "title": "OREOLU MILKSHAKE",
-      "price": 180
+      "price": 180,
+      "image": "/uploads/oreomilk.jpg"
     },
     {
       "active": true,
       "title": "MUZLU MILKSHAKE",
-      "price": 180
+      "price": 180,
+      "image": "/uploads/muzlumilk.jpg"
     }
   ]
 }
