@@ -13,13 +13,6 @@
       "price": 140,
       "category": "Tatlılar",
       "active": true
-    },
-    {
-      "active": true,
-      "title": "sssssss",
-      "price": 333333,
-      "category": "Yiyecekler",
-      "description": "zzzzzzzzz"
     }
   ]
 }
