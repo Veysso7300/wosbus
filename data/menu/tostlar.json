@@ -1,1 +1,19 @@
-{ "items": [] }
+{
+  "items": [
+    {
+      "active": true,
+      "title": "KAŞARLI TOST + PATATES",
+      "price": 120
+    },
+    {
+      "active": true,
+      "title": "SUCUKLU TOST + PATATES",
+      "price": 120
+    },
+    {
+      "active": true,
+      "title": "KARIŞIK TOST + PATATES",
+      "price": 130
+    }
+  ]
+}
