@@ -1,1 +1,30 @@
-{ "items": [] }
+{
+  "items": [
+    {
+      "active": true,
+      "title": "ÇAY",
+      "price": 25
+    },
+    {
+      "active": true,
+      "title": "KIŞ ÇAYI",
+      "price": 150
+    },
+    {
+      "active": true,
+      "title": "IHLAMUR",
+      "price": 150,
+      "desc": "150"
+    },
+    {
+      "active": true,
+      "title": "NANE LİMON",
+      "price": 150
+    },
+    {
+      "active": true,
+      "title": "YEŞİL ÇAY",
+      "price": 146
+    }
+  ]
+}
