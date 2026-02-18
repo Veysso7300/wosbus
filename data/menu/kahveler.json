@@ -1,1 +1,84 @@
-{ "items": [] }
+{
+  "items": [
+    {
+      "active": true,
+      "title": "NESCAFE",
+      "price": 60
+    },
+    {
+      "active": true,
+      "title": "SÜTLÜ NESCAFE",
+      "price": 80
+    },
+    {
+      "active": true,
+      "title": "CAPPUCINO",
+      "price": 150
+    },
+    {
+      "active": true,
+      "title": "MOCHA",
+      "price": 180
+    },
+    {
+      "active": true,
+      "title": "LATTE",
+      "price": 180
+    },
+    {
+      "active": true,
+      "title": "MACCHIATO",
+      "price": 180
+    },
+    {
+      "active": true,
+      "title": "ESPRESSO",
+      "price": 100
+    },
+    {
+      "active": true,
+      "title": "DOUBLE ESPRESSO",
+      "price": 150
+    },
+    {
+      "active": true,
+      "title": "SAHLEP",
+      "price": 160
+    },
+    {
+      "active": true,
+      "title": "AMERICANO",
+      "price": 150
+    },
+    {
+      "active": true,
+      "title": "FİLTRE KAHVE ",
+      "price": 150
+    },
+    {
+      "active": true,
+      "title": "TÜRK KAHVESİ",
+      "price": 100
+    },
+    {
+      "active": true,
+      "title": "SÜTLÜ TÜRK KAHVESİ",
+      "price": 100
+    },
+    {
+      "active": true,
+      "title": "MENENGİÇ",
+      "price": 100
+    },
+    {
+      "active": true,
+      "title": "DİBEK",
+      "price": 100
+    },
+    {
+      "active": true,
+      "title": "DAMLA SAKIZLI TÜRK KAHVESİ",
+      "price": 98
+    }
+  ]
+}
