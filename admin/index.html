@@ -2,11 +2,27 @@
 <html lang="tr">
   <head>
     <meta charset="utf-8" />
-    <title>Wosbus Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wosbus Admin</title>
+
+    <!-- Netlify Identity (ŞART) -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <!-- Decap CMS -->
+    <script defer src="https://unpkg.com/decap-cms@^3.1.0/dist/decap-cms.js"></script>
+
+    <style>
+      html, body { height: 100%; margin: 0; }
+    </style>
   </head>
   <body>
-    <script src="https://unpkg.com/decap-cms@3.10.0/dist/decap-cms.js"></script>
+    <script>
+      // Login olunca admin'e geri dön (redirect loop yapmasın diye basit)
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    </script>
   </body>
 </html>
