@@ -1,30 +1,13 @@
 backend:
   name: git-gateway
-  branch: main   # senin branch adın neyse (main/master)
+  branch: main
 
-media_folder: "uploads"
+media_folder: "public/uploads"
 public_folder: "/uploads"
-
-publish_mode: simple
 
 collections:
   - name: "menu"
     label: "Menü"
-    files:
-      - name: "menuData"
-        label: "Menü Verisi"
-        file: "data/menu.json"
-        format: "json"
-        fields:
-          - label: "Kategoriler"
-            name: "categories"
-            widget: "list"
-            fields:
-              - { label: "Kategori Adı", name: "name", widget: "string" }
-              - label: "Ürünler"
-                name: "items"
-                widget: "list"
-                fields:
-                  - { label: "Ürün Adı", name: "title", widget: "string" }
-                  - { label: "Fiyat (₺)", name: "price", widget: "number", value_type: "int", min: 0 }
-                  - { label: "Açıklama", name: "desc", widget: "string", required: false }
+    file: "content/menu.yml"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
