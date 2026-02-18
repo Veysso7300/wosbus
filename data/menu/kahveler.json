@@ -79,6 +79,16 @@
       "active": true,
       "title": "DAMLA SAKIZLI TÜRK KAHVESİ",
       "price": 98
+    },
+    {
+      "active": true,
+      "title": "ICED LATTE",
+      "price": 180
+    },
+    {
+      "active": true,
+      "title": "FRAPPE",
+      "price": 180
     }
   ]
 }
