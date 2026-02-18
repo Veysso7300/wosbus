@@ -8,50 +8,105 @@
 
   <style>
     :root{
-      --bg:#0b0b0b; --card:#141414; --muted:#a9a9a9; --text:#fff;
-      --accent:#00e5ff; --border:rgba(255,255,255,.10);
-      --r16:16px; --r20:20px;
+      --bg:#0b0b0b;
+      --card:#141414;
+      --muted:#a9a9a9;
+      --text:#ffffff;
+      --accent:#00e5ff;
+      --accent2:#ff007a;
+      --border:rgba(255,255,255,.10);
+      --r14:14px; --r16:16px; --r18:18px; --r20:20px;
+      --shadow: 0 10px 30px rgba(0,0,0,.45);
     }
-    *{box-sizing:border-box}
+    *{ box-sizing:border-box; }
     body{
-      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
-      background: radial-gradient(900px 500px at 20% 0%, rgba(0,229,255,.14), transparent 60%),
-                  radial-gradient(900px 500px at 90% 10%, rgba(255,0,122,.10), transparent 55%),
-                  var(--bg);
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
       color:var(--text);
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      background:
+        radial-gradient(900px 520px at 15% 0%, rgba(0,229,255,.16), transparent 60%),
+        radial-gradient(900px 520px at 92% 10%, rgba(255,0,122,.12), transparent 55%),
+        radial-gradient(700px 520px at 45% 110%, rgba(0,229,255,.08), transparent 55%),
+        var(--bg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-    a{color:#9ad0ff; text-decoration:none}
-    .wrap{max-width:980px; margin:0 auto; padding:16px 14px 90px;}
+    a{ color:#9ad0ff; text-decoration:none; }
+    .wrap{ max-width:980px; margin:0 auto; padding:14px 14px 90px; }
+
     header{
       display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
       padding-top:6px;
     }
-    h1{margin:0; font-size:30px; letter-spacing:.2px;}
-    .sub{margin-top:4px; color:var(--muted); font-size:13px;}
-    .btn{
-      border:1px solid var(--border); background:rgba(255,255,255,.04); color:var(--text);
-      padding:10px 12px; border-radius:14px; font-size:14px; display:inline-flex; gap:8px; align-items:center;
+    .brand{
+      display:flex; flex-direction:column; gap:4px;
+    }
+    .logo{
+      display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;
+    }
+    h1{ margin:0; font-size:30px; letter-spacing:.25px; }
+    .tag{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(0,229,255,.35);
+      background:rgba(0,229,255,.08);
+      color:rgba(255,255,255,.92);
       white-space:nowrap;
     }
-    .btn:active{transform:scale(.98)}
+    .sub{ margin:0; color:rgba(255,255,255,.72); font-size:13px; }
+
+    .actions{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; justify-content:flex-end; }
+    .btn{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:14px;
+      font-size:14px;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      white-space:nowrap;
+      box-shadow: 0 6px 18px rgba(0,0,0,.25);
+    }
+    .btn:active{ transform:scale(.98); }
+    .btn.wa{ border-color:rgba(37,211,102,.35); background:rgba(37,211,102,.08); }
+    .btn.ig{ border-color:rgba(255,0,122,.25); background:rgba(255,0,122,.08); }
+    .btn.admin{ border-color:rgba(0,229,255,.25); background:rgba(0,229,255,.06); }
+
+    /* --- Compact filter bar --- */
     .sticky{
       position:sticky; top:0; z-index:10;
-      padding:12px 0 10px;
-      background: linear-gradient(180deg, rgba(11,11,11,.95), rgba(11,11,11,.55));
-      backdrop-filter: blur(8px);
+      padding:10px 0 10px;
+      background: linear-gradient(180deg, rgba(11,11,11,.96), rgba(11,11,11,.65));
+      backdrop-filter: blur(10px);
     }
     .panel{
       border:1px solid var(--border);
       background:rgba(255,255,255,.03);
-      border-radius:var(--r20);
-      padding:12px;
+      border-radius:var(--r18);
+      padding:10px;
       display:grid;
-      gap:10px;
+      gap:8px;
+      box-shadow: var(--shadow);
     }
+    .rowA{
+      display:grid;
+      grid-template-columns: 1fr 140px;
+      gap:8px;
+      align-items:center;
+    }
+    .rowB{
+      display:flex; gap:8px; overflow:auto; padding:2px 2px 0;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width: none;
+    }
+    .rowB::-webkit-scrollbar{ display:none; }
+
     input,select{
       width:100%;
-      padding:13px 12px;
+      padding:11px 12px;
       border-radius:14px;
       border:1px solid var(--border);
       background:rgba(0,0,0,.30);
@@ -59,41 +114,56 @@
       outline:none;
       font-size:16px; /* iOS zoom engeli */
     }
-    .row2{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
-    .chips{
-      display:flex; gap:8px; overflow:auto; padding:10px 2px 0;
-      -webkit-overflow-scrolling:touch;
-    }
+    select{ padding-right:10px; }
+    input::placeholder{ color:rgba(255,255,255,.45); }
+
     .chip{
       flex:0 0 auto;
       border:1px solid var(--border);
       background:rgba(255,255,255,.04);
-      padding:10px 12px;
+      padding:9px 11px;
       border-radius:999px;
-      font-size:14px;
+      font-size:13px;
       color:var(--text);
       opacity:.9;
     }
-    .chip.active{border-color:rgba(0,229,255,.45); background:rgba(0,229,255,.08); opacity:1;}
-    .meta{margin-top:8px; color:rgba(255,255,255,.55); font-size:12px;}
-    .grid{display:grid; gap:14px; margin-top:14px;}
+    .chip.active{
+      border-color:rgba(0,229,255,.45);
+      background:linear-gradient(90deg, rgba(0,229,255,.12), rgba(255,0,122,.08));
+      opacity:1;
+    }
+    .meta{
+      margin-top:2px;
+      color:rgba(255,255,255,.55);
+      font-size:12px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .grid{ display:grid; gap:14px; margin-top:14px; }
     .cat{
       border:1px solid var(--border);
       background:rgba(255,255,255,.02);
       border-radius:var(--r20);
       overflow:hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
     }
     .catHead{
       padding:12px 14px;
       display:flex; align-items:center; justify-content:space-between; gap:10px;
-      background: linear-gradient(90deg, rgba(0,229,255,.10), rgba(255,0,122,.06));
+      background: linear-gradient(90deg, rgba(0,229,255,.11), rgba(255,0,122,.07));
       border-bottom:1px solid var(--border);
     }
-    .catTitle{font-weight:800; font-size:15px}
-    .count{color:var(--muted); font-size:12px}
-    .items{display:grid; gap:10px; padding:12px;}
+    .catTitle{ font-weight:850; font-size:15px; letter-spacing:.15px; }
+    .count{ color:var(--muted); font-size:12px; }
+
+    .items{ display:grid; gap:10px; padding:12px; }
     .item{
-      display:grid; grid-template-columns:72px 1fr auto; gap:12px;
+      display:grid;
+      grid-template-columns:72px 1fr auto;
+      gap:12px;
       padding:12px;
       background:var(--card);
       border:1px solid var(--border);
@@ -101,7 +171,8 @@
       align-items:start;
     }
     .thumb{
-      width:72px; height:72px; border-radius:14px;
+      width:72px; height:72px;
+      border-radius:14px;
       border:1px solid rgba(255,255,255,.08);
       background:rgba(255,255,255,.04);
       overflow:hidden;
@@ -109,9 +180,9 @@
       color:rgba(255,255,255,.45);
       font-size:12px;
     }
-    .thumb img{width:100%; height:100%; object-fit:cover; display:block;}
-    .title{font-weight:850; font-size:15px; line-height:1.15}
-    .desc{color:var(--muted); font-size:13px; margin-top:4px; line-height:1.25}
+    .thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .title{ font-weight:900; font-size:15px; line-height:1.15; }
+    .desc{ color:var(--muted); font-size:13px; margin-top:4px; line-height:1.25; }
     .price{
       padding:9px 10px;
       border-radius:999px;
@@ -121,9 +192,20 @@
       white-space:nowrap;
       margin-left:6px;
     }
-    .footer{margin-top:16px; color:rgba(255,255,255,.55); font-size:12px; display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;}
+
+    .footer{
+      margin-top:16px;
+      color:rgba(255,255,255,.55);
+      font-size:12px;
+      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+      padding-bottom: 6px;
+    }
+
     .toast{
-      position:fixed; left:50%; bottom:18px; transform:translateX(-50%);
+      position:fixed;
+      left:50%;
+      bottom:18px;
+      transform:translateX(-50%);
       background:rgba(0,0,0,.78);
       border:1px solid var(--border);
       color:var(--text);
@@ -132,15 +214,16 @@
       font-size:13px;
       display:none;
       max-width:92vw;
+      box-shadow: var(--shadow);
     }
-    .toast.show{display:block}
+    .toast.show{ display:block; }
+
     @media (min-width:760px){
-      .wrap{padding:22px 16px 90px;}
-      h1{font-size:38px;}
-      .panel{grid-template-columns:1fr; }
-      .row2{grid-template-columns: 1fr 220px;}
-      .item{grid-template-columns:84px 1fr auto;}
-      .thumb{width:84px; height:84px;}
+      .wrap{ padding:20px 16px 90px; }
+      h1{ font-size:38px; }
+      .rowA{ grid-template-columns: 1fr 180px; }
+      .item{ grid-template-columns:84px 1fr auto; }
+      .thumb{ width:84px; height:84px; }
     }
   </style>
 </head>
@@ -148,31 +231,48 @@
 <body>
   <div class="wrap">
     <header>
-      <div>
-        <h1>Wosbus Menü</h1>
-        <div class="sub">Telefon uyumlu • Arama • Kategori</div>
+      <div class="brand">
+        <div class="logo">
+          <h1>Wosbus Menü</h1>
+          <span class="tag">coffee • vibes • wosbus</span>
+        </div>
+        <p class="sub">Mobil uyumlu menü • Arama • Kategori • Foto</p>
       </div>
-      <div style="display:flex; gap:10px;">
-        <a class="btn" href="/admin/" title="Menüyü düzenle">✏️ Admin</a>
-        <a class="btn" href="#" id="shareBtn" title="Linki kopyala">🔗 Paylaş</a>
+
+      <div class="actions">
+        <a class="btn ig" target="_blank" rel="noopener"
+           href="https://www.instagram.com/wos_bus_coffee?igsh=ejQ5eWo5dmNvbmh2">📸 Instagram</a>
+
+        <a class="btn wa" id="waBtn" target="_blank" rel="noopener"
+           href="#">💬 WhatsApp</a>
+
+        <a class="btn admin" href="/admin/" title="Menüyü düzenle">✏️ Admin</a>
       </div>
     </header>
 
     <div class="sticky">
       <div class="panel">
-        <input id="q" placeholder="Ara: espresso, cheesecake..." autocomplete="off" />
-        <div class="row2">
-          <select id="catSel">
-            <option value="">Tüm Kategoriler</option>
-          </select>
+        <div class="rowA">
+          <input id="q" placeholder="Ara: espresso, cheesecake..." autocomplete="off" />
           <select id="onlyActive">
-            <option value="1">Sadece Aktif</option>
-            <option value="0">Tümü (aktif+pasif)</option>
+            <option value="1">Aktif</option>
+            <option value="0">Tümü</option>
           </select>
         </div>
 
-        <div class="chips" id="chips"></div>
-        <div class="meta" id="status">Menü yükleniyor…</div>
+        <div class="rowA">
+          <select id="catSel">
+            <option value="">Tüm Kategoriler</option>
+          </select>
+          <a class="btn" href="#" id="shareBtn" style="justify-content:center;">🔗 Paylaş</a>
+        </div>
+
+        <div class="rowB" id="chips"></div>
+
+        <div class="meta">
+          <span id="status">Menü yükleniyor…</span>
+          <span id="meta"></span>
+        </div>
       </div>
     </div>
 
@@ -180,13 +280,15 @@
 
     <div class="footer">
       <div>© Wosbus</div>
-      <div id="meta"></div>
+      <div>DM & WhatsApp ile sipariş</div>
     </div>
   </div>
 
   <div class="toast" id="toast"></div>
 
 <script>
+  const PHONE_E164 = "905398833429"; // +90 539 883 3429
+
   const elGrid = document.getElementById("grid");
   const elQ = document.getElementById("q");
   const elCatSel = document.getElementById("catSel");
@@ -202,6 +304,11 @@
     setTimeout(() => toast.classList.remove("show"), 1400);
   };
 
+  // WhatsApp deep link
+  const waText = encodeURIComponent("Merhaba Wosbus 👋 Menüden geldim. Sipariş vermek istiyorum.");
+  document.getElementById("waBtn").href = `https://wa.me/${PHONE_E164}?text=${waText}`;
+
+  // Share
   document.getElementById("shareBtn").addEventListener("click", async (e) => {
     e.preventDefault();
     try { await navigator.clipboard.writeText(location.href); showToast("Link kopyalandı ✅"); }
@@ -216,7 +323,8 @@
 
   function fmtTRY(n){
     const num = typeof n === "number" ? n : parseFloat(n || 0);
-    return (Number.isFinite(num) ? Math.round(num) : n) + "₺";
+    const v = Number.isFinite(num) ? Math.round(num) : n;
+    return `${v}₺`;
   }
 
   function buildCats(items){
@@ -227,19 +335,24 @@
 
   function renderChips(){
     elChips.innerHTML = "";
-    const all = document.createElement("button");
-    all.className = "chip" + (chipActive === "" ? " active" : "");
-    all.textContent = "Tümü";
-    all.onclick = () => { chipActive=""; elCatSel.value=""; apply(); };
-    elChips.appendChild(all);
 
-    for (const c of categories){
+    const mk = (label, value) => {
       const b = document.createElement("button");
-      b.className = "chip" + (chipActive === c ? " active" : "");
-      b.textContent = c;
-      b.onclick = () => { chipActive=c; elCatSel.value=c; apply(); };
-      elChips.appendChild(b);
-    }
+      b.className = "chip" + (chipActive === value ? " active" : "");
+      b.textContent = label;
+      b.onclick = () => {
+        chipActive = value;
+        elCatSel.value = value;
+        renderChips();
+        apply();
+      };
+      return b;
+    };
+
+    chipActive = elCatSel.value || chipActive;
+    elChips.appendChild(mk("Tümü", ""));
+
+    for (const c of categories) elChips.appendChild(mk(c, c));
   }
 
   function render(items){
@@ -249,7 +362,6 @@
       return;
     }
 
-    // kategoriye grupla
     const map = new Map();
     for (const it of items){
       const c = (it.category || "Diğer").trim();
@@ -257,12 +369,10 @@
       map.get(c).push(it);
     }
 
-    // her kategori içinde alfabetik
     for (const [k, arr] of map.entries()){
       arr.sort((a,b)=>(a.title||"").localeCompare(b.title||"","tr"));
     }
 
-    // sırayı categories’e göre ver
     const orderedCats = Array.from(map.keys()).sort((a,b)=>a.localeCompare(b,"tr"));
 
     for (const cat of orderedCats){
@@ -280,7 +390,7 @@
 
       for (const it of list){
         const img = it.image ? String(it.image) : "";
-        const desc = it.desc || ""; // sende alan adı "desc" :contentReference[oaicite:1]{index=1}
+        const desc = it.desc || "";
         const card = document.createElement("div");
         card.className = "item";
         card.innerHTML = `
@@ -326,9 +436,9 @@
       if (!res.ok) throw new Error("menu.json okunamadı: " + res.status);
       const data = await res.json();
       rawItems = Array.isArray(data.items) ? data.items : [];
+
       categories = buildCats(rawItems);
 
-      // select doldur
       elCatSel.innerHTML = `<option value="">Tüm Kategoriler</option>` + categories.map(c => `<option value="${c}">${c}</option>`).join("");
       renderChips();
 
