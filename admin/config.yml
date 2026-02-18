@@ -21,14 +21,28 @@ collections:
           - label: "Ürünler"
             name: "items"
             widget: "list"
-            summary: "{{fields.title}} - {{fields.price}}"
+            collapsed: true
+            minimize_collapsed: true
+            allow_add: true
+            summary: >
+              {{fields.active}} • {{fields.category}} • {{fields.title}} — {{fields.price}}₺
             fields:
-              - { label: "Ürün", name: "title", widget: "string" }
-              - { label: "Fiyat", name: "price", widget: "number", value_type: "float", min: 0 }
+              - { label: "Aktif", name: "active", widget: "boolean", default: true }
+
+              - { label: "Ürün Adı", name: "title", widget: "string" }
+
               - label: "Kategori"
                 name: "category"
                 widget: "select"
                 options: ["Kahveler", "Tatlılar", "İçecekler", "Yiyecekler"]
+
+              - label: "Fiyat (₺)"
+                name: "price"
+                widget: "number"
+                value_type: "float"
+                min: 0
+                default: 0
+
               - { label: "Fotoğraf", name: "image", widget: "image", required: false }
-              - { label: "Açıklama", name: "desc", widget: "text", required: false }
-              - { label: "Aktif mi?", name: "active", widget: "boolean", default: true }
+
+              - { label: "Açıklama", name: "desc", widget: "string", required: false, hint: "Kısa tut (örn. 5–8 kelime)" }
