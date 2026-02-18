@@ -1,6 +1,6 @@
 ---
 title: Espresso
-price: 80
+price: 90
 category: Kahveler
 active: true
 ---
