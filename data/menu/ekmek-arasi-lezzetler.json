@@ -3,37 +3,44 @@
     {
       "active": true,
       "title": "EKMEK ARASI KÖFTE",
-      "price": 200
+      "price": 200,
+      "image": "/uploads/köftekmek.jpg"
     },
     {
       "active": true,
       "title": "BALIK EKMEK",
-      "price": 200
+      "price": 200,
+      "image": "/uploads/blkekmek.jpg"
     },
     {
       "active": true,
       "title": "SUCUK EKMEK",
-      "price": 200
+      "price": 200,
+      "image": "/uploads/sckekm.jpg"
     },
     {
       "active": true,
       "title": "SOSİS EKMEK",
-      "price": 160
+      "price": 160,
+      "image": "/uploads/sosisekmk.jpg"
     },
     {
       "active": true,
       "title": "ŞİNİTZEL EKMEK",
-      "price": 160
+      "price": 160,
+      "image": "/uploads/şinitekmek.jpg"
     },
     {
       "active": true,
       "title": "NUGGET EKMEK",
-      "price": 160
+      "price": 160,
+      "image": "/uploads/nuggetekemk.jpg"
     },
     {
       "active": true,
       "title": "TAVUK EKMEK",
-      "price": 160
+      "price": 160,
+      "image": "/uploads/tavukekmek.webp"
     }
   ]
 }
