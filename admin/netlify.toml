@@ -2,15 +2,7 @@
   publish = "."
   command = ""
 
-# Admin panel (Decap) SPA gibi çalışsın
 [[redirects]]
   from = "/admin/*"
   to = "/admin/index.html"
-  status = 200
-
-# Ana sayfa/SPA routing varsa (opsiyonel)
-# Statik tek sayfa kullanıyorsan açık kalsın; istemezsen silebilirsin.
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
   status = 200
