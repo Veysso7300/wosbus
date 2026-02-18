@@ -1,37 +1,33 @@
 <!doctype html>
 <html lang="tr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Wosbus Admin</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>Wosbus Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Netlify Identity (git-gateway için gerekli) -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- Netlify Identity -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-  <!-- Decap CMS -->
-  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3/dist/decap-cms.js"></script>
+    <!-- Decap CMS (Netlify CMS'in yeni adı) -->
+    <script defer src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
-  <style>
-    html,body{height:100%}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif}
-  </style>
-</head>
-<body>
-  <!-- Decap buraya mount eder -->
-  <div id="nc-root"></div>
+    <style>
+      body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif; }
+    </style>
+  </head>
 
-  <script>
-    // Admin sayfasında redirect falan yapma. Döngüye giriyor.
-    // Sadece invite/recovery gelirse widget aç:
-    if (window.netlifyIdentity) {
-      const h = window.location.hash || "";
-      const isInvite = h.includes("invite_token=");
-      const isRecovery = h.includes("recovery_token=");
-      window.netlifyIdentity.on("init", (user) => {
-        if ((isInvite || isRecovery) && !user) window.netlifyIdentity.open("signup");
-      });
-      window.netlifyIdentity.init();
-    }
-  </script>
-</body>
+  <body>
+    <!-- ✅ BU YOKSA "appendChild of null" olur -->
+    <div id="nc-root"></div>
+
+    <script>
+      // Identity login ekranını aç (admin'e girince giriş istesin)
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) window.netlifyIdentity.open();
+        });
+        window.netlifyIdentity.init();
+      }
+    </script>
+  </body>
 </html>
