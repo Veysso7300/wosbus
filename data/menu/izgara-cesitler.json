@@ -15,13 +15,13 @@
     {
       "active": true,
       "title": "KANAT PORSİYON",
-      "price": 250,
+      "price": 350,
       "image": "/uploads/KANAT.jpg"
     },
     {
       "active": true,
       "title": "TAVUK PİRZOLA",
-      "price": 250,
+      "price": 350,
       "image": "/uploads/tavuk-pirzola-15208c40-e887-4e78-ae56-3ccd88b7f807.avif"
     }
   ]
