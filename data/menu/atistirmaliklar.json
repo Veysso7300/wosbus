@@ -49,6 +49,18 @@
       "price": 100,
       "desc": "8 ADET",
       "image": "/uploads/soğanhalkasi.webp"
+    },
+    {
+      "active": true,
+      "title": "MEYVE TABAĞI (2 KİŞİLİK)",
+      "price": 200,
+      "image": "/uploads/MEYVE.jpg"
+    },
+    {
+      "active": true,
+      "title": "KURUYEMİŞ TABAĞI",
+      "price": 200,
+      "image": "/uploads/KURUYEM.jpg"
     }
   ]
 }
