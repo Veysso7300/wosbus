@@ -23,6 +23,24 @@
       "title": "TAVUK PİRZOLA",
       "price": 350,
       "image": "/uploads/tavuk-pirzola-15208c40-e887-4e78-ae56-3ccd88b7f807.avif"
+    },
+    {
+      "active": true,
+      "title": "SAHAHNDA KAVURMA",
+      "price": 350,
+      "image": "/uploads/unnamed.jpg"
+    },
+    {
+      "active": true,
+      "title": "ŞİNİTZEL PORSİYON",
+      "image": "/uploads/ŞİNİTPORS.jpg",
+      "price": 199
+    },
+    {
+      "active": true,
+      "title": "NUGGET PORSİYON",
+      "price": 200,
+      "image": "/uploads/NUGGETPORS.gif"
     }
   ]
 }
