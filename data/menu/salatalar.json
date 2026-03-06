@@ -17,6 +17,11 @@
       "title": "IZGARA TAVUK SALATASI",
       "price": 200,
       "image": "/uploads/IZGARATAVUKSALATA.jpg"
+    },
+    {
+      "active": true,
+      "title": "MEVSİM SALATA",
+      "price": 250
     }
   ]
 }
