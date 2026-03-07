@@ -33,7 +33,7 @@
     {
       "active": true,
       "title": "ORALET",
-      "price": 25,
+      "price": 30,
       "image": "/uploads/oralet.jpg"
     },
     {
@@ -45,13 +45,13 @@
     {
       "active": true,
       "title": "MADEN SUYU (SADE)",
-      "price": 30,
+      "price": 40,
       "image": "/uploads/sadesoda.jpg"
     },
     {
       "active": true,
       "title": "MADEN SUYU (MEYVELİ)",
-      "price": 40,
+      "price": 50,
       "image": "/uploads/meyveli soda.jpg"
     },
     {
