@@ -9,26 +9,26 @@
     {
       "active": true,
       "title": "KIŞ ÇAYI",
-      "price": 200,
+      "price": 150,
       "image": "/uploads/kışçayı.jpg"
     },
     {
       "active": true,
       "title": "IHLAMUR",
-      "price": 200,
-      "desc": "150",
+      "price": 150,
+      "desc": "",
       "image": "/uploads/ıhlamur.webp"
     },
     {
       "active": true,
       "title": "NANE LİMON",
-      "price": 200,
+      "price": 150,
       "image": "/uploads/nanelimon.jpg"
     },
     {
       "active": true,
       "title": "YEŞİL ÇAY",
-      "price": 200,
+      "price": 150,
       "image": "/uploads/yeşil çay.jpg"
     }
   ]
