@@ -32,12 +32,6 @@
     },
     {
       "active": true,
-      "title": "ORALET",
-      "price": 30,
-      "image": "/uploads/oralet.jpg"
-    },
-    {
-      "active": true,
       "title": "LİMONATA",
       "price": 80,
       "image": "/uploads/limonata.jpg"
