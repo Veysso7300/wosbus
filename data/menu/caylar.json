@@ -30,6 +30,12 @@
       "title": "YEŞİL ÇAY",
       "price": 150,
       "image": "/uploads/yeşil çay.jpg"
+    },
+    {
+      "active": true,
+      "title": "ORALET",
+      "price": 30,
+      "image": "/uploads/oralet.jpg"
     }
   ]
 }
