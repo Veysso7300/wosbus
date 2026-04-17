@@ -20,32 +20,32 @@
     },
     {
       "active": true,
-      "title": "ÇITIR TAVUK",
+      "title": "F_ÇITIR TAVUK",
       "price": 200,
       "image": "/uploads/ÇITIRTAVUK.jpg"
     },
     {
       "active": true,
-      "title": "PATATES CİPSİ",
+      "title": "F_PATATES CİPSİ",
       "price": 150,
       "image": "/uploads/CİPS.jpeg"
     },
     {
       "active": true,
-      "title": "WOSBUS TABAĞI",
+      "title": "F_WOS-BUS TABAĞI",
       "price": 200,
       "image": "/uploads/WOSBUSTABAK.jpg"
     },
     {
       "active": true,
-      "title": "SİGARA BÖREĞİ",
+      "title": "F_SİGARA BÖREĞİ",
       "price": 100,
       "desc": "8 ADET",
       "image": "/uploads/SİGARA.webp"
     },
     {
       "active": true,
-      "title": "SOĞAN HALKASI",
+      "title": "F_SOĞAN HALKASI",
       "price": 100,
       "desc": "8 ADET",
       "image": "/uploads/soğanhalkasi.webp"
@@ -53,12 +53,12 @@
     {
       "active": true,
       "title": "MEYVE TABAĞI (2 KİŞİLİK)",
-      "price": 200,
+      "price": 250,
       "image": "/uploads/MEYVE.jpg"
     },
     {
       "active": true,
-      "title": "KURUYEMİŞ TABAĞI",
+      "title": "M_KURUYEMİŞ TABAĞI",
       "price": 200,
       "image": "/uploads/KURUYEM.jpg"
     }
