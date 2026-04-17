@@ -8,19 +8,19 @@
     },
     {
       "active": true,
-      "title": "TON BALIKLI SALATA",
+      "title": "S_TON BALIKLI SALATA",
       "price": 200,
       "image": "/uploads/TONBALIK.jpg"
     },
     {
       "active": true,
-      "title": "IZGARA TAVUK SALATASI",
+      "title": "S_IZGARA TAVUK SALATASI",
       "price": 200,
       "image": "/uploads/IZGARATAVUKSALATA.jpg"
     },
     {
       "active": true,
-      "title": "MEVSİM SALATA",
+      "title": "S_MEVSİM SALATA",
       "price": 100,
       "image": "/uploads/19-Mevsim-Salata.jpg"
     }
