@@ -2,25 +2,25 @@
   "items": [
     {
       "active": true,
-      "title": "S_AKDENİZ SALATASI",
+      "title": "AKDENİZ SALATASI",
       "price": 150,
       "image": "/uploads/beyaz-peynirli-akdeniz-salatasi.webp"
     },
     {
       "active": true,
-      "title": "S_TON BALIKLI SALATA",
+      "title": "TON BALIKLI SALATA",
       "price": 200,
       "image": "/uploads/TONBALIK.jpg"
     },
     {
       "active": true,
-      "title": "S_IZGARA TAVUK SALATASI",
+      "title": "IZGARA TAVUK SALATASI",
       "price": 200,
       "image": "/uploads/IZGARATAVUKSALATA.jpg"
     },
     {
       "active": true,
-      "title": "S_MEVSİM SALATA",
+      "title": "MEVSİM SALATA",
       "price": 100,
       "image": "/uploads/19-Mevsim-Salata.jpg"
     }
