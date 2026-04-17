@@ -2,19 +2,19 @@
   "items": [
     {
       "active": true,
-      "title": "NUGGET PORSİYON",
+      "title": "F_NUGGET PORSİYON",
       "price": 200,
       "image": "/uploads/NUGGETPORS.gif"
     },
     {
       "active": true,
-      "title": "ŞİNİTZEL PORSİYON",
+      "title": "F_ŞİNİTZEL PORSİYON",
       "price": 200,
       "image": "/uploads/ŞİNİTPORS.jpg"
     },
     {
       "active": true,
-      "title": "SOSİS PORSİYON",
+      "title": "F_SOSİS PORSİYON",
       "price": 200,
       "image": "/uploads/SOSİSPORS.jpg"
     },
