@@ -72,14 +72,25 @@
     }
     .tabs::-webkit-scrollbar{display:none}
     .tab{
-      flex:0 0 auto;
-      padding:10px 12px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.04);
-      font-size:13px;
-      user-select:none;
-    }
+  flex:0 0 auto;
+  padding:10px 12px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.04);
+  font-size:13px;
+  user-select:none;
+  color: rgba(255,255,255,0.85);  /* 👈 BUNU EKLEDİN */
+}
+
+.tab.active{
+  border-color:rgba(0,229,255,.50);
+  background: linear-gradient(90deg, rgba(0,229,255,.14), rgba(255,0,122,.10));
+  color: #ffffff; /* 👈 BUNU EKLEDİN */
+}
+
+.tab:hover{
+  color: #00e5ff; /* 👈 BUNU EKLEDİN */
+}
     .tab.active{
       border-color:rgba(0,229,255,.50);
       background: linear-gradient(90deg, rgba(0,229,255,.14), rgba(255,0,122,.10));
