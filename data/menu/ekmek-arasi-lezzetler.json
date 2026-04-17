@@ -8,31 +8,31 @@
     },
     {
       "active": true,
-      "title": "BALIK EKMEK",
+      "title": "E_BALIK EKMEK",
       "price": 250,
       "image": "/uploads/blkekmek.jpg"
     },
     {
       "active": true,
-      "title": "SUCUK EKMEK",
+      "title": "E_SUCUK EKMEK",
       "price": 250,
       "image": "/uploads/sckekm.jpg"
     },
     {
       "active": true,
-      "title": "SOSİS EKMEK",
+      "title": "E_SOSİS EKMEK",
       "price": 200,
       "image": "/uploads/sosisekmk.jpg"
     },
     {
       "active": true,
-      "title": "ŞİNİTZEL EKMEK",
+      "title": "E_ŞİNİTZEL EKMEK",
       "price": 200,
       "image": "/uploads/şinitekmek.jpg"
     },
     {
       "active": true,
-      "title": "NUGGET EKMEK",
+      "title": "E_NUGGET EKMEK",
       "price": 200,
       "image": "/uploads/nuggetekemk.jpg"
     },
