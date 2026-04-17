@@ -254,8 +254,16 @@
     }
 
     // A-Z
-    items.sort((a,b)=>(a.title||"").localeCompare(b.title||"","tr"));
+    items.sort((a, b) => {
+  const catOrder = SOURCES.map(s => s.cat);
 
+  const catA = catOrder.indexOf(a.category);
+  const catB = catOrder.indexOf(b.category);
+
+  if (catA !== catB) return catA - catB;
+
+  return (a.title || "").localeCompare(b.title || "", "tr");
+});
     render(items);
     elMeta.textContent = `Gösterilen: ${items.length} / Toplam: ${allItems.length}`;
   }
