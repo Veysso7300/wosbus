@@ -52,13 +52,13 @@
     },
     {
       "active": true,
-      "title": "MEYVE TABAĞI (2 KİŞİLİK)",
+      "title": ". MEYVE TABAĞI (2 KİŞİLİK)",
       "price": 250,
       "image": "/uploads/MEYVE.jpg"
     },
     {
       "active": true,
-      "title": "KURUYEMİŞ TABAĞI",
+      "title": ". KURUYEMİŞ TABAĞI",
       "price": 250,
       "image": "/uploads/KURUYEM.jpg"
     }
