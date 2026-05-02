@@ -3,20 +3,20 @@
     {
       "active": true,
       "title": "KAŞARLI TOST + PATATES",
-      "price": 130,
-      "image": "/uploads/kasarli-tost-dcb9.webp"
+      "price": 150,
+      "image": ""
     },
     {
       "active": true,
       "title": "SUCUKLU TOST + PATATES",
-      "price": 130,
-      "image": "/uploads/sucuklutost.jpg"
+      "price": 150,
+      "image": ""
     },
     {
       "active": true,
       "title": "KARIŞIK TOST + PATATES",
-      "price": 150,
-      "image": "/uploads/karışıktost.jpg"
+      "price": 170,
+      "image": ""
     }
   ]
 }
