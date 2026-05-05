@@ -3,25 +3,25 @@
     {
       "active": true,
       "title": "KLASİK BURGER",
-      "price": 180,
+      "price": 200,
       "image": "/uploads/klskburger.jpg"
     },
     {
       "active": true,
       "title": "KLASİK CHEESEBURGER",
-      "price": 200,
+      "price": 230,
       "image": "/uploads/klskcheese.jpg"
     },
     {
       "active": true,
       "title": "DOUBLE BURGER",
-      "price": 250,
+      "price": 280,
       "image": "/uploads/doubleburger.jpg"
     },
     {
       "active": true,
       "title": "TAVUK BURGER",
-      "price": 180,
+      "price": 200,
       "image": ""
     }
   ]
