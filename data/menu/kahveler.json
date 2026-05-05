@@ -33,13 +33,13 @@
     {
       "active": true,
       "title": "1 ESPRESSO",
-      "price": 129,
+      "price": 130,
       "image": "/uploads/espresso.jpg"
     },
     {
       "active": true,
       "title": "1 DOUBLE ESPRESSO",
-      "price": 168,
+      "price": 170,
       "image": "/uploads/dblespresso.jpg"
     },
     {
@@ -57,7 +57,7 @@
     {
       "active": true,
       "title": "1 FİLTRE KAHVE ",
-      "price": 199,
+      "price": 200,
       "image": "/uploads/filtre.webp"
     },
     {
