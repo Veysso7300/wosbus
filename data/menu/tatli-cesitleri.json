@@ -65,6 +65,12 @@
       "title": "RED VELVET",
       "price": 250,
       "image": "/uploads/redvelvet.jpg"
+    },
+    {
+      "active": true,
+      "image": "/uploads/chees.jpg",
+      "price": 200,
+      "title": "CHEESCAKE"
     }
   ]
 }
