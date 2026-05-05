@@ -20,7 +20,7 @@
     },
     {
       "active": true,
-      "title": "LATTE",
+      "title": "1 LATTE",
       "price": 200,
       "image": "/uploads/latte.jpg"
     },
@@ -32,31 +32,31 @@
     },
     {
       "active": true,
-      "title": "ESPRESSO",
+      "title": "1 ESPRESSO",
       "price": 129,
       "image": "/uploads/espresso.jpg"
     },
     {
       "active": true,
-      "title": "DOUBLE ESPRESSO",
+      "title": "1 DOUBLE ESPRESSO",
       "price": 168,
       "image": "/uploads/dblespresso.jpg"
     },
     {
       "active": true,
-      "title": "SAHLEP",
+      "title": "1 SAHLEP",
       "price": 160,
       "image": "/uploads/sahlep.jpg"
     },
     {
       "active": true,
-      "title": "AMERICANO",
+      "title": "1 AMERICANO",
       "price": 170,
       "image": "/uploads/americano-kahve-nedir-nasil-yapilir-9-fas.webp"
     },
     {
       "active": true,
-      "title": "FİLTRE KAHVE ",
+      "title": "1 FİLTRE KAHVE ",
       "price": 199,
       "image": "/uploads/filtre.webp"
     },
@@ -92,13 +92,13 @@
     },
     {
       "active": true,
-      "title": "ICED LATTE",
+      "title": "1 ICED LATTE",
       "price": 200,
       "image": "/uploads/ıcedlatte.jpg"
     },
     {
       "active": true,
-      "title": "FRAPPE",
+      "title": "1 FRAPPE",
       "price": 200,
       "image": "/uploads/frappe.jpg"
     }
