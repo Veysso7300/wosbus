@@ -53,6 +53,12 @@
       "title": "ICED TEA",
       "price": 80,
       "image": "/uploads/ıcedtea.jpg"
+    },
+    {
+      "active": true,
+      "title": "AYRAN",
+      "image": "/uploads/46054715-8a2faf-8a2faf.jpg",
+      "price": 40
     }
   ]
 }
