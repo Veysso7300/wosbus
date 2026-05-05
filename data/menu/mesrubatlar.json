@@ -71,6 +71,12 @@
       "title": "ŞİŞE FANTA ",
       "price": 60,
       "image": "/uploads/fantaşi̇şe.jpg"
+    },
+    {
+      "active": true,
+      "title": "GAZOZ",
+      "price": 50,
+      "image": "/uploads/gazoz.jpg"
     }
   ]
 }
