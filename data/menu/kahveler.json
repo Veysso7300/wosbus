@@ -62,36 +62,6 @@
     },
     {
       "active": true,
-      "title": "TÜRK KAHVESİ",
-      "price": 118,
-      "image": "/uploads/türk kahvesi.jpg"
-    },
-    {
-      "active": true,
-      "title": "SÜTLÜ TÜRK KAHVESİ",
-      "price": 130,
-      "image": "/uploads/türk kahvesi sütlü.jpg"
-    },
-    {
-      "active": true,
-      "title": "MENENGİÇ",
-      "price": 130,
-      "image": "/uploads/menengiç.jpg"
-    },
-    {
-      "active": true,
-      "title": "DİBEK",
-      "price": 130,
-      "image": "/uploads/dibek.webp"
-    },
-    {
-      "active": true,
-      "title": "DAMLA SAKIZLI TÜRK KAHVESİ",
-      "price": 130,
-      "image": "/uploads/türk kahvesi damla sakızlı.jpg"
-    },
-    {
-      "active": true,
       "title": "1 ICED LATTE",
       "price": 200,
       "image": "/uploads/ıcedlatte.jpg"
