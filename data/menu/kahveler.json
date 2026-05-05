@@ -33,13 +33,13 @@
     {
       "active": true,
       "title": "ESPRESSO",
-      "price": 100,
+      "price": 129,
       "image": "/uploads/espresso.jpg"
     },
     {
       "active": true,
       "title": "DOUBLE ESPRESSO",
-      "price": 150,
+      "price": 168,
       "image": "/uploads/dblespresso.jpg"
     },
     {
@@ -51,19 +51,19 @@
     {
       "active": true,
       "title": "AMERICANO",
-      "price": 150,
+      "price": 170,
       "image": "/uploads/americano-kahve-nedir-nasil-yapilir-9-fas.webp"
     },
     {
       "active": true,
       "title": "FİLTRE KAHVE ",
-      "price": 150,
+      "price": 199,
       "image": "/uploads/filtre.webp"
     },
     {
       "active": true,
       "title": "TÜRK KAHVESİ",
-      "price": 120,
+      "price": 118,
       "image": "/uploads/türk kahvesi.jpg"
     },
     {
