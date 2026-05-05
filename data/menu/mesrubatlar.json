@@ -77,6 +77,18 @@
       "title": "GAZOZ",
       "price": 50,
       "image": "/uploads/gazoz.jpg"
+    },
+    {
+      "active": true,
+      "title": "SU",
+      "image": "/uploads/25-litre-su-bu-kisiler-icin-zararli-olabilir_5763_1.jpg",
+      "price": 25
+    },
+    {
+      "active": true,
+      "title": "ŞALGAM ACILI/ACISIZ",
+      "price": 50,
+      "image": "/uploads/images.jpg"
     }
   ]
 }
