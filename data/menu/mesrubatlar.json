@@ -59,6 +59,18 @@
       "title": "AYRAN",
       "image": "/uploads/46054715-8a2faf-8a2faf.jpg",
       "price": 40
+    },
+    {
+      "active": true,
+      "title": "ŞİŞE KOLA",
+      "image": "/uploads/şi̇şekola.jpg",
+      "price": 60
+    },
+    {
+      "active": true,
+      "title": "ŞİŞE FANTA ",
+      "price": 60,
+      "image": "/uploads/fantaşi̇şe.jpg"
     }
   ]
 }
