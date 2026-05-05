@@ -8,13 +8,13 @@
     },
     {
       "active": true,
-      "title": "CAPPUCINO",
+      "title": "1 CAPPUCINO",
       "price": 200,
       "image": ""
     },
     {
       "active": true,
-      "title": "MOCHA",
+      "title": "1 MOCHA",
       "price": 200,
       "image": "/uploads/mocha.jpg"
     },
@@ -26,7 +26,7 @@
     },
     {
       "active": true,
-      "title": "MACCHIATO",
+      "title": "1 MACCHIATO",
       "price": 200,
       "image": "/uploads/macchıato.webp"
     },
