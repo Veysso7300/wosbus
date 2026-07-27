@@ -8,27 +8,27 @@
     },
     {
       "active": true,
-      "title": "KIŞ ÇAYI",
-      "price": 150,
+      "title": "KIŞ ÇAYI SOFT",
+      "price": 160,
       "image": "/uploads/kışçayı.jpg"
     },
     {
       "active": true,
-      "title": "IHLAMUR",
-      "price": 150,
+      "title": "IHLAMUR SOFT",
+      "price": 160,
       "desc": "",
       "image": "/uploads/ıhlamur.webp"
     },
     {
       "active": true,
-      "title": "NANE LİMON",
-      "price": 150,
+      "title": "NANE LİMON SOFT",
+      "price": 160,
       "image": "/uploads/nanelimon.jpg"
     },
     {
       "active": true,
-      "title": "YEŞİL ÇAY",
-      "price": 150,
+      "title": "YEŞİL ÇAY SOFT",
+      "price": 160,
       "image": "/uploads/yeşil çay.jpg"
     },
     {
