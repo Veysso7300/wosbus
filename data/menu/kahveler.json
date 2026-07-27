@@ -32,26 +32,26 @@
     },
     {
       "active": true,
-      "title": "1 ESPRESSO",
+      "title": "1 ESPRESSO ŞHOT",
       "price": 150,
       "image": "/uploads/espresso.jpg"
     },
     {
       "active": true,
       "title": "1 DOUBLE ESPRESSO",
-      "price": 170,
+      "price": 200,
       "image": "/uploads/dblespresso.jpg"
     },
     {
       "active": true,
       "title": "1 SAHLEP",
-      "price": 160,
+      "price": 200,
       "image": "/uploads/sahlep.jpg"
     },
     {
       "active": true,
       "title": "1 AMERICANO",
-      "price": 170,
+      "price": 200,
       "image": "/uploads/americano-kahve-nedir-nasil-yapilir-9-fas.webp"
     },
     {
