@@ -15,31 +15,31 @@
     {
       "active": true,
       "title": "SUCUK EKMEK",
-      "price": 250,
+      "price": 300,
       "image": "/uploads/sckekm.jpg"
     },
     {
       "active": true,
       "title": "SOSİS EKMEK",
-      "price": 200,
+      "price": 220,
       "image": "/uploads/sosisekmk.jpg"
     },
     {
       "active": true,
       "title": "ŞİNİTZEL EKMEK",
-      "price": 200,
+      "price": 220,
       "image": "/uploads/şinitekmek.jpg"
     },
     {
       "active": true,
       "title": "NUGGET EKMEK",
-      "price": 200,
+      "price": 220,
       "image": "/uploads/nuggetekemk.jpg"
     },
     {
       "active": true,
       "title": "TAVUK EKMEK",
-      "price": 200,
+      "price": 220,
       "image": "/uploads/tavukekmek.webp"
     }
   ]
