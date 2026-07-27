@@ -3,13 +3,13 @@
     {
       "active": true,
       "title": "EKMEK ARASI KÖFTE",
-      "price": 250,
+      "price": 300,
       "image": "/uploads/köftekmek.jpg"
     },
     {
       "active": true,
       "title": "BALIK EKMEK",
-      "price": 250,
+      "price": 300,
       "image": "/uploads/blkekmek.jpg"
     },
     {
