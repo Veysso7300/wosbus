@@ -2,26 +2,26 @@
   "items": [
     {
       "active": true,
-      "title": "KLASİK BURGER",
-      "price": 200,
+      "title": "KLASİK BURGER + CİPS",
+      "price": 250,
       "image": "/uploads/klskburger.jpg"
     },
     {
       "active": true,
-      "title": "KLASİK CHEESEBURGER",
-      "price": 230,
+      "title": "KLASİK CHEESEBURGER + CİPS",
+      "price": 280,
       "image": "/uploads/klskcheese.jpg"
     },
     {
       "active": true,
-      "title": "DOUBLE BURGER",
-      "price": 280,
+      "title": "DOUBLE BURGER + CİPS",
+      "price": 350,
       "image": "/uploads/doubleburger.jpg"
     },
     {
       "active": true,
-      "title": "TAVUK BURGER",
-      "price": 200,
+      "title": "TAVUK BURGER + CİPS",
+      "price": 220,
       "image": "/uploads/tavukbrgr.jpg"
     }
   ]
