@@ -3,31 +3,31 @@
     {
       "active": true,
       "title": "NUGGET PORSİYON",
-      "price": 200,
+      "price": 250,
       "image": "/uploads/NUGGETPORS.gif"
     },
     {
       "active": true,
       "title": "ŞİNİTZEL PORSİYON",
-      "price": 200,
+      "price": 250,
       "image": "/uploads/ŞİNİTPORS.jpg"
     },
     {
       "active": true,
       "title": "SOSİS PORSİYON",
-      "price": 200,
+      "price": 250,
       "image": "/uploads/SOSİSPORS.jpg"
     },
     {
       "active": true,
       "title": "ÇITIR TAVUK",
-      "price": 200,
+      "price": 250,
       "image": "/uploads/ÇITIRTAVUK.jpg"
     },
     {
       "active": true,
-      "title": "PATATES CİPSİ",
-      "price": 160,
+      "title": "PATATES CİPSİ Büyük Boy",
+      "price": 180,
       "image": "/uploads/CİPS.jpeg"
     },
     {
@@ -39,21 +39,21 @@
     {
       "active": true,
       "title": "SİGARA BÖREĞİ",
-      "price": 100,
+      "price": 120,
       "desc": "8 ADET",
       "image": "/uploads/SİGARA.webp"
     },
     {
       "active": true,
       "title": "SOĞAN HALKASI",
-      "price": 100,
+      "price": 120,
       "desc": "8 ADET",
       "image": "/uploads/soğanhalkasi.webp"
     },
     {
       "active": true,
       "title": ". MEYVE TABAĞI (2 KİŞİLİK)",
-      "price": 250,
+      "price": 350,
       "image": "/uploads/MEYVE.jpg"
     },
     {
