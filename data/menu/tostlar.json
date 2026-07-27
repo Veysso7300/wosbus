@@ -2,20 +2,20 @@
   "items": [
     {
       "active": true,
-      "title": "KAŞARLI TOST + PATATES",
-      "price": 150,
+      "title": "KAŞARLI TOST + PATATES CİPSİ",
+      "price": 180,
       "image": "/uploads/karışıktost.jpg"
     },
     {
       "active": true,
-      "title": "SUCUKLU TOST + PATATES",
-      "price": 150,
+      "title": "SUCUKLU TOST + PATATES CİPSİ",
+      "price": 180,
       "image": "/uploads/sucuklutost.jpg"
     },
     {
       "active": true,
-      "title": "KARIŞIK TOST + PATATES",
-      "price": 170,
+      "title": "KARIŞIK TOST + PATATES CİPSİ",
+      "price": 200,
       "image": "/uploads/karışıktost.jpg"
     }
   ]
